@@ -2,7 +2,7 @@
 {
     "name": "ᴀʟɪᴄᴇᴏʙᴏᴛ",
     "description": "Telegram Group Management Bot Written In Python Using python-telegram-bot.",
-    "repository": "https://github.com/rishabh69/aliceRobot",
+    "repository": "https://github.com/chetanuser/alicerobot",
     "logo": "https://te.legra.ph/file/b0e09aabe796209f01d3d.jpg",
     "keywords": [
     "python3",
@@ -65,12 +65,12 @@
       "DATABASE_URL": {
          "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴅᴀᴛᴀʙᴀsᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴs (sǫʟ :- elephantsql.com).",
          "required": false,
-         "value": ""
+         "value": "postgres://lzhvfpnv:s9L1bnduygqyhGJugWTTjtDT1shFOE3y@satao.db.elephantsql.com/lzhvfpnv"
       },
       "MONGO_DB_URI": {
          "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴅᴀᴛᴀʙᴀsᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴs (ᴍᴏɴɢᴏ).",
          "required": true,
-         "value": "mongodb+srv://aliceTESTMONGO:aliceTESTMONGO@cluster0.bviw7ic.mongodb.net/?retryWrites=true&w=majority"
+         "value": "mongodb+srv://alice2robot:alice123rishabh@cluster0.b8qsmkn.mongodb.net/?retryWrites=true&w=majority"
       },
       "TOKEN": {
          "description": "Get bot token from @BotFather on TG",
