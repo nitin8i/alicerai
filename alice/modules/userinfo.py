@@ -518,7 +518,7 @@ def stats(update, context):
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
             + "\n\n[⍙ ɢɪᴛʜᴜʙ](https://t.me/fakemailbot) | ⍚\n\n "
-            + "╘══「 by [ᴀʙɪsʜɴᴏɪ](github.com/rishabh69) 」\n",
+            + "╘══「 by [ʀɪꜱʜᴀʙʜ](github.com/rishabh69) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(kb),
             disable_web_page_preview=True,

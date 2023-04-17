@@ -33,4 +33,4 @@
 
 asuka robot ɪs ʟɪᴄᴇɴsᴇᴅ ᴜɴᴅᴇʀ ᴛʜᴇ [ᴍɪᴛ ʟɪᴄᴇɴsᴇ](https://t.me/fakemailbot/blob/master/LICENSE).
 
-© 2022 - 2023 [@ᴀʙɪsʜɴᴏɪᴍғ](https://t.me/thanosprosss), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ
+© 2022 - 2023 [@ʀɪꜱʜᴀʙʜᴍғ](https://t.me/thanosprosss), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ

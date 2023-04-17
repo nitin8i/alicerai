@@ -218,7 +218,7 @@ WARN MANAGEMENT
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴀʙɪsʜɴᴏɪ", url="https://t.me/thanosceo"
+                            text="ʀɪꜱʜᴀʙʜ", url="https://t.me/thanosceo"
                         ),
                         InlineKeyboardButton(
                             text="ᴄʜᴀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"

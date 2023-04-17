@@ -48,7 +48,7 @@ logging.getLogger("ptbcontrib.postgres_persistence.postgrespersistence").setLeve
 )
 
 LOGGER = logging.getLogger("[ᴀʟɪᴄᴇ]")
-LOGGER.info("ᴀʟɪᴄᴇ ɪs sᴛᴀʀᴛɪɴɢ. | ᴀɴ ᴀʙɪsʜɴᴏɪᴍғ ᴘʀᴏᴊᴇᴄᴛ ᴘᴀʀᴛs. | ʟɪᴄᴇɴsᴇᴅ ᴜɴᴅᴇʀ ɢᴘʟᴠ3.")
+LOGGER.info("ᴀʟɪᴄᴇ ɪs sᴛᴀʀᴛɪɴɢ. | ᴀɴ ʀɪꜱʜᴀʙʜᴍғ ᴘʀᴏᴊᴇᴄᴛ ᴘᴀʀᴛs. | ʟɪᴄᴇɴsᴇᴅ ᴜɴᴅᴇʀ ɢᴘʟᴠ3.")
 
 try:
     if environ.get("ENV"):

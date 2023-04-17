@@ -56,7 +56,7 @@ combot_stickers_url = "https://combot.org/telegram/stickers?q="
 
 
 def convert_gif(input):
-    """ғᴜɴᴄᴛɪᴏɴ ᴛᴏ ᴄᴏɴᴠᴇʀᴛ ᴍᴘ4 ᴛᴏ ᴡᴇʙᴍ(ᴠᴘ9)!(ᴀʙɪsʜɴᴏɪ)"""
+    """ғᴜɴᴄᴛɪᴏɴ ᴛᴏ ᴄᴏɴᴠᴇʀᴛ ᴍᴘ4 ᴛᴏ ᴡᴇʙᴍ(ᴠᴘ9)!(ʀɪꜱʜᴀʙʜ)"""
 
     vid = cv2.VideoCapture(input)
     height = vid.get(cv2.CAP_PROP_FRAME_HEIGHT)
