@@ -75,7 +75,7 @@ def ABG_about_callback(update, context):
     query = update.callback_query
     if query.data == "ABG_":
         query.message.edit_text(
-            text=f"๏ ɪ'ᴍ {BOT_NAME} ,hello I am "
+            text=f"๏ hello I am Λʟɪᴄᴇ"
             "\n\n*ᴄʟɪᴄᴋ ᴏɴ ʙᴜᴛᴛᴏɴ ʙᴇʟʟᴏᴡ ᴛᴏ ɢᴇᴛ ʙᴀsɪᴄ ʜᴇʟᴘ ғᴏʀ ᴀʟɪᴄᴇʀᴏʙᴏᴛ*.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -140,13 +140,13 @@ def ABG_about_callback(update, context):
         )
     elif query.data == "ABG_ad":
         query.message.edit_text(
-            text="""**Advanced Commands**
+            text="""Advanced Commands in Λʟɪᴄᴇ
 
 👮🏻Available to Admins&Moderators.
 🕵🏻Available to Admins.
 🛃 Available to Admins&Cleaners
 
-**WARN MANAGEMENT**
+WARN MANAGEMENT
 👮🏻 /warn adds a warn to the user
 👮🏻 /unwarn removes a warn to the user
 👮🏻 /warns lets you see and manage user warns
@@ -163,7 +163,7 @@ def ABG_about_callback(update, context):
         )
     elif query.data == "ABG_ex":
         query.message.edit_text(
-            text="""**ᴇxᴘᴇʀᴛ ᴄᴏᴍᴍᴀɴᴅs**
+            text="""ᴇxᴘᴇʀᴛ ᴄᴏᴍᴍᴀɴᴅs in Λʟɪᴄᴇ
 🕵🏻/connect : ʟᴇᴛs ʏᴏᴜ ᴍᴀɴᴀɢᴇ ᴀʟʟ ᴛʜᴇ ʙᴏᴛ sᴇᴛᴛɪɴɢs ᴛᴏ sᴇᴛ-ᴜᴘ ғᴜɴᴄᴛɪᴏɴ.  
 👮🏻/promote : ᴄᴏɴᴛʀᴏʟ ᴡʜᴏʟᴇ ᴘʀᴏᴍᴏᴛᴇ ᴘᴀɴᴇʟ ʟɪᴋᴇ : ʟᴏᴡ-ᴘʀᴏᴍᴏᴛᴇ, ᴍɪᴅ-ᴘʀᴏᴍᴏᴛᴇ, ғᴜʟʟ-ᴘʀᴏᴍᴏᴛᴇ, ᴀɴᴏɴʏᴍᴏᴜs ᴘʀᴏᴍᴏᴛᴇ.
 👮🏻/antiflood : ᴄᴏɴᴛʀᴏʟ ᴡʜᴏʟᴇ ᴀɴᴛɪғʟᴏᴏᴅ ᴘᴀɴᴇʟ ʟɪᴋᴇ : ғʟᴏᴏᴅᴍᴏᴅᴇ, ғʟᴏᴏᴅ ᴍsɢ, ᴏʀ ғʟᴏᴏᴅ.
