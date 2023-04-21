@@ -95,7 +95,7 @@ def ABG_about_callback(update, context):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="🕵‍♀session", callback_data="ABG_ex"
+                            text="ꜱᴇꜱꜱɪᴏɴ🏵", callback_data="ABG_ex"
                         ),
                         InlineKeyboardButton(
                             text="ɢᴏ ʙᴀᴄᴋ", callback_data="help_back"
@@ -170,6 +170,19 @@ WARN MANAGEMENT
             ),
         )
     elif query.data == "ABG_ex":
+        query.message.edit_text(
+            text="""ᴇxᴘᴇʀᴛ ᴄᴏᴍᴍᴀɴᴅs in Λʟɪᴄᴇ
+🕵🏻/connect : ʟᴇᴛs ʏᴏᴜ ᴍᴀɴᴀɢᴇ ᴀʟʟ ᴛʜᴇ ʙᴏᴛ sᴇᴛᴛɪɴɢs ᴛᴏ sᴇᴛ-ᴜᴘ ғᴜɴᴄᴛɪᴏɴ.  
+👮🏻/promote : ᴄᴏɴᴛʀᴏʟ ᴡʜᴏʟᴇ ᴘʀᴏᴍᴏᴛᴇ ᴘᴀɴᴇʟ ʟɪᴋᴇ : ʟᴏᴡ-ᴘʀᴏᴍᴏᴛᴇ, ᴍɪᴅ-ᴘʀᴏᴍᴏᴛᴇ, ғᴜʟʟ-ᴘʀᴏᴍᴏᴛᴇ, ᴀɴᴏɴʏᴍᴏᴜs ᴘʀᴏᴍᴏᴛᴇ.
+👮🏻/antiflood : ᴄᴏɴᴛʀᴏʟ ᴡʜᴏʟᴇ ᴀɴᴛɪғʟᴏᴏᴅ ᴘᴀɴᴇʟ ʟɪᴋᴇ : ғʟᴏᴏᴅᴍᴏᴅᴇ, ғʟᴏᴏᴅ ᴍsɢ, ᴏʀ ғʟᴏᴏᴅ.
+👮🏻/blacklist : ᴄᴏɴᴛʀᴏʟ ᴡʜᴏʟᴇ ʙʟᴀᴄᴋʟɪsᴛ ᴘᴀɴᴇʟ ʟɪᴋᴇ : ʙʟᴀᴄᴋʟɪsᴛᴍᴏᴅᴇ ᴏʀ  ʙʟᴀᴄᴋʟɪsᴛ .
+👮🏻/lock : ᴄᴏɴᴛʀᴏʟ ᴡʜᴏʟᴇ ʟᴏᴄᴋ ᴘᴀɴᴇʟ ʟɪᴋᴇ : ʟᴏᴄᴋ, ᴜɴʟᴏᴄᴋ, ᴏʀ ʟᴏᴄᴋs.""",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="ABG_")]]
+            ),
+        )
+    elif query.data == "ABG_session":
         query.message.edit_text(
             text="""ᴇxᴘᴇʀᴛ ᴄᴏᴍᴍᴀɴᴅs in Λʟɪᴄᴇ
 🕵🏻/connect : ʟᴇᴛs ʏᴏᴜ ᴍᴀɴᴀɢᴇ ᴀʟʟ ᴛʜᴇ ʙᴏᴛ sᴇᴛᴛɪɴɢs ᴛᴏ sᴇᴛ-ᴜᴘ ғᴜɴᴄᴛɪᴏɴ.  
