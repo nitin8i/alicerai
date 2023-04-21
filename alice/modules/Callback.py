@@ -95,6 +95,14 @@ def ABG_about_callback(update, context):
                     ],
                     [
                         InlineKeyboardButton(
+                            text="🕵‍♀session", callback_data="ABG_ex"
+                        ),
+                        InlineKeyboardButton(
+                            text="ɢᴏ ʙᴀᴄᴋ", callback_data="help_back"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
                             text="ɢᴏ ʙᴀᴄᴋ", callback_data="start_back"
                         ),
                     ],
