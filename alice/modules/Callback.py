@@ -95,7 +95,7 @@ def ABG_about_callback(update, context):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ꜱᴇꜱꜱɪᴏɴ🏵", callback_data="ABG_ex"
+                            text="ꜱᴇꜱꜱɪᴏɴ🏵", callback_data="ABG_session"
                         ),
                         InlineKeyboardButton(
                             text="ɢᴏ ʙᴀᴄᴋ", callback_data="help_back"
@@ -183,6 +183,28 @@ WARN MANAGEMENT
             ),
         )
     elif query.data == "ABG_session":
+        query.message.edit_text(
+            text="""ꜱᴇꜱꜱɪᴏɴ🏵 ᴄᴏᴍᴍᴀɴᴅs in Λʟɪᴄᴇ:
+
+╭────────────
+◈ɴᴏᴛᴇ-> ꜰᴏʀ ᴍᴀᴋɪɴɢ ᴀɴᴛɪʙᴀɴ.      
+   ᴛᴇʟᴇᴛʜᴏɴ ꜱᴇꜱꜱɪᴏɴ ᴛʜᴇɴ ᴜꜱᴇ
+   ᴛʜᴀɴᴏꜱ    ꜱᴇꜱꜱɪᴏɴ 
+
+◈ᴀʙᴏᴜᴛ ᴛʜᴀɴᴏꜱ ꜱᴇꜱꜱɪᴏɴ:
+   ᴛʜᴀɴᴏꜱ ꜱᴇꜱꜱɪᴏɴ ɪꜱ ᴍᴏᴅɪꜰɪᴇᴅ            
+   ᴛᴇʟᴇᴛʜᴏɴ ꜱᴇꜱꜱɪᴏɴ
+
+◈ᴄᴏᴍᴍᴀɴᴅs:
+◈```/session``` ꜰᴏʀ ᴍᴀᴋɪɴɢ ꜱᴇꜱꜱɪᴏɴ
+
+╰────────────""",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="ABG_")]]
+            ),
+        )
+    elif query.data == "ABG_music":
         query.message.edit_text(
             text="""ꜱᴇꜱꜱɪᴏɴ🏵 ᴄᴏᴍᴍᴀɴᴅs in Λʟɪᴄᴇ:
 
