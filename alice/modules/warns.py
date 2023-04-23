@@ -75,7 +75,7 @@ from alice.modules.sql.approve_sql import is_approved
 from ..modules.helper_funcs.anonymous import AdminPerms, user_admin
 
 WARN_HANDLER_GROUP = 9
-CURRENT_WARNING_FILTER_STRING = "<b>ᴄᴜʀʀᴇɴᴛ ᴡᴀʀɴɪɴɢ ꜰɪʟᴛᴇʀꜱ ɪɴ ᴛʜɪꜱ ᴄʜᴀᴛ:</b>\n"
+CURRENT_WARNING_FILTER_STRING = "<b>ᴄᴜʀʀᴇɴᴛ ᴡΛʀɴɪɴɢ ꜰɪʟᴛᴇʀꜱ ɪɴ ᴛʜɪꜱ ᴄʜΛᴛ:</b>\n"
 
 
 # Not async
@@ -84,24 +84,24 @@ def warn(
 ) -> Optional[str]:  # sourcery no-metrics
     chat = update.effective_chat
     if is_user_admin(update, user.id):
-        # message.reply_text("ᴅᴀᴍɴ ᴀᴅᴍɪɴꜱ, ᴛʜᴇʏ ᴀʀᴇ ᴛᴏᴏ ꜰᴀʀ ᴛᴏ ʙᴇ ᴋɪᴄᴋᴇᴅ!")
+        # message.reply_text("ᴅΛᴍɴ Λᴅᴍɪɴꜱ, ᴛʜᴇʏ Λʀᴇ ᴛᴏᴏ ꜰΛʀ ᴛᴏ ʙᴇ ᴋɪᴄᴋᴇᴅ!")
         return
 
     if user.id in TIGERS:
         if warner:
-            message.reply_text("ʟɪɢʜᴛ ꜱʜᴏᴏᴛᴇʀꜱ ᴄᴀɴᴛ ʙᴇ ᴡᴀʀɴᴇᴅ.")
+            message.reply_text("ʟɪɢʜᴛ ꜱʜᴏᴏᴛᴇʀꜱ ᴄΛɴᴛ ʙᴇ ᴡΛʀɴᴇᴅ.")
         else:
             message.reply_text(
-                "ʟɪɢʜᴛ ꜱʜᴏᴏᴛᴇʀꜱ ᴛʀɪɢɢʀᴇᴅ ᴀɴ ᴀᴜᴛᴏ ᴡᴀʀɴ ꜰɪʟᴛᴇʀꜱ!\n ɪ ᴄᴀɴ'ᴛ ᴡᴀʀɴ ᴛʜᴇ ʟɪɢʜᴛ ꜱʜᴏᴏᴛᴇʀꜱ ʙᴜᴛ ᴛʜᴇʏ ꜱʜᴏᴜʟᴅ ᴀᴠᴏɪᴅ ᴀʙᴜꜱɪɴɢ ᴛʜɪꜱ."
+                "ʟɪɢʜᴛ ꜱʜᴏᴏᴛᴇʀꜱ ᴛʀɪɢɢʀᴇᴅ Λɴ Λᴜᴛᴏ ᴡΛʀɴ ꜰɪʟᴛᴇʀꜱ!\n ɪ ᴄΛɴ'ᴛ ᴡΛʀɴ ᴛʜᴇ ʟɪɢʜᴛ ꜱʜᴏᴏᴛᴇʀꜱ ʙᴜᴛ ᴛʜᴇʏ ꜱʜᴏᴜʟᴅ Λᴠᴏɪᴅ Λʙᴜꜱɪɴɢ ᴛʜɪꜱ."
             )
         return
 
     if user.id in WOLVES:
         if warner:
-            message.reply_text("ᴠɪʟʟᴀɪɴ ᴅɪꜱᴀꜱᴛᴇʀꜱ ᴀʀᴇ ᴡᴀʀɴ ɪᴍᴍᴜɴᴇ.")
+            message.reply_text("ᴠɪʟʟΛɪɴ ᴅɪꜱΛꜱᴛᴇʀꜱ Λʀᴇ ᴡΛʀɴ ɪᴍᴍᴜɴᴇ.")
         else:
             message.reply_text(
-                "ᴠɪʟʟᴀɪɴꜱ ᴅɪꜱᴀꜱᴛᴇʀ ᴛʀɪɢɢᴇʀᴇᴅ ᴀɴ ᴀᴜᴛᴏ ᴡᴀʀɴ ꜰɪʟᴛᴇʀꜱ!\nɪ ᴄᴀɴ'ᴛ ᴡᴀʀɴ ᴛʜᴇ ᴠɪʟʟᴀɪɴꜱ ʙᴜᴛ ᴛʜᴇʏ ꜱʜᴏᴜʟᴅ ᴀᴠᴏɪᴅ ᴀʙᴜꜱɪɴɢ ᴛʜɪꜱ."
+                "ᴠɪʟʟΛɪɴꜱ ᴅɪꜱΛꜱᴛᴇʀ ᴛʀɪɢɢᴇʀᴇᴅ Λɴ Λᴜᴛᴏ ᴡΛʀɴ ꜰɪʟᴛᴇʀꜱ!\nɪ ᴄΛɴ'ᴛ ᴡΛʀɴ ᴛʜᴇ ᴠɪʟʟΛɪɴꜱ ʙᴜᴛ ᴛʜᴇʏ ꜱʜᴏᴜʟᴅ Λᴠᴏɪᴅ Λʙᴜꜱɪɴɢ ᴛʜɪꜱ."
             )
         return
 
@@ -125,7 +125,7 @@ def warn(
         else:  # ban
             chat.ban_member(user.id)
             reply = (
-                f"❕ ʙᴀɴ ᴇᴠᴇɴᴛ\n"
+                f"❕ ʙΛɴ ᴇᴠᴇɴᴛ\n"
                 f"➻ ᴜꜱᴇʀ: {mention_html(user.id, user.first_name)}\n"
                 f"➻ ᴄᴏᴜɴᴛ: {limit}"
             )
@@ -138,10 +138,10 @@ def warn(
         log_reason = (
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"#WARN_BAN\n"
-            f"<b>ᴀᴅᴅ ᴜꜱᴇʀ:</b> {warner_tag}\n"
+            f"<b>Λᴅᴅ ᴜꜱᴇʀ:</b> {warner_tag}\n"
             f"<b>ᴜꜱᴇʀ:</b> {mention_html(user.id, user.first_name)}\n"
             f"<b>ᴜꜱᴇʀ ɪᴅ:</b> <code>{user.id}</code>\n"
-            f"<b>ʀᴇᴀꜱᴏɴ:</b> {reason}\n"
+            f"<b>ʀᴇΛꜱᴏɴ:</b> {reason}\n"
             f"<b>ᴄᴏᴜɴᴛꜱ:</b> <code>{num_warns}/{limit}</code>"
         )
 
@@ -150,27 +150,27 @@ def warn(
             [
                 [
                     InlineKeyboardButton(
-                        "⟳ ʀᴇᴍᴏᴠᴇ ᴡᴀʀɴ ⟲", callback_data="rm_warn({})".format(user.id)
+                        "⟳ ʀᴇᴍᴏᴠᴇ ᴡΛʀɴ ⟲", callback_data="rm_warn({})".format(user.id)
                     )
                 ]
             ]
         )
 
         reply = (
-            f"❕ ᴡᴀʀɴ ᴇᴠᴇɴᴛ\n"
+            f"❕ ᴡΛʀɴ ᴇᴠᴇɴᴛ\n"
             f"⟃ ᴜꜱᴇʀ: {mention_html(user.id, user.first_name)}\n"
             f"⟃ ᴄᴏᴜɴᴛ: {num_warns}/{limit}"
         )
         if reason:
-            reply += f"\n⟃ ʀᴇᴀꜱᴏɴ: {html.escape(reason)}"
+            reply += f"\n⟃ ʀᴇΛꜱᴏɴ: {html.escape(reason)}"
 
         log_reason = (
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"#WARN\n"
-            f"<b>ᴀᴅᴍɪɴ:</b> {warner_tag}\n"
+            f"<b>Λᴅᴍɪɴ:</b> {warner_tag}\n"
             f"<b>ᴜꜱᴇʀ:</b> {mention_html(user.id, user.first_name)}\n"
             f"<b>ᴜꜱᴇʀ ɪᴅ:</b> <code>{user.id}</code>\n"
-            f"<b>ʀᴇᴀꜱᴏɴ:</b> {reason}\n"
+            f"<b>ʀᴇΛꜱᴏɴ:</b> {reason}\n"
             f"<b>ᴄᴏᴜɴᴛꜱ:</b> <code>{num_warns}/{limit}</code>"
         )
 
@@ -207,12 +207,12 @@ def button(update: Update, context: CallbackContext) -> str:
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"#UNWARN\n"
-                f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+                f"<b>Λᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
                 f"<b>ᴜꜱᴇʀ:</b> {mention_html(user_member.user.id, user_member.user.first_name)}\n"
                 f"<b>ᴜꜱᴇʀ ɪᴅ:</b> <code>{user_member.user.id}</code>"
             )
         update.effective_message.edit_text(
-            "ᴜꜱᴇʀ ᴀʟʀᴇᴀᴅʏ ʜᴀꜱʜ ɴᴏ ᴡᴀʀɴꜱ.", parse_mode=ParseMode.HTML
+            "ᴜꜱᴇʀ ΛʟʀᴇΛᴅʏ ʜΛꜱʜ ɴᴏ ᴡΛʀɴꜱ.", parse_mode=ParseMode.HTML
         )
 
     return ""
@@ -243,7 +243,7 @@ def warn_user(update: Update, context: CallbackContext) -> str:
             )
         return warn(chat.get_member(user_id).user, update, reason, message, warner)
     else:
-        message.reply_text("➻ ᴛʜᴀᴛ ʟᴏᴏᴋꜱ ʟɪᴋᴇ ᴀɴ ɪɴᴠᴀʟɪᴅ ᴜꜱᴇʀ ɪᴅ ᴛᴏ ᴍᴇ.")
+        message.reply_text("➻ ᴛʜΛᴛ ʟᴏᴏᴋꜱ ʟɪᴋᴇ Λɴ ɪɴᴠΛʟɪᴅ ᴜꜱᴇʀ ɪᴅ ᴛᴏ ᴍᴇ.")
     return ""
 
 
@@ -265,11 +265,11 @@ def reset_warns(update: Update, context: CallbackContext) -> str:
         return (
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"#RESETWARNS\n"
-            f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+            f"<b>Λᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
             f"<b>ᴜꜱᴇʀ:</b> {mention_html(warned.id, warned.first_name)}\n"
             f"<b>ᴜꜱᴇʀ ɪᴅ:</b> <code>{warned.id}</code>"
         )
-    message.reply_text("⟃ ɴᴏ ᴜꜱᴇʀ ʜᴀꜱ ʙᴇᴇɴ ᴅᴇꜱɪɢɴᴀᴛᴇᴅ!")
+    message.reply_text("⟃ ɴᴏ ᴜꜱᴇʀ ʜΛꜱ ʙᴇᴇɴ ᴅᴇꜱɪɢɴΛᴛᴇᴅ!")
     return ""
 
 
@@ -286,7 +286,7 @@ def warns(update: Update, context: CallbackContext):
 
         if reasons:
             text = (
-                f"➻ ᴛʜɪꜱ ᴜꜱᴇʀ ʜᴀꜱ {num_warns}/{limit} ᴡᴀʀɴꜱ, ꜰᴏʀ ᴛʜᴇ ꜰᴏʟʟᴏᴡɪɴɢ ʀᴇᴀꜱᴏɴ:"
+                f"➻ ᴛʜɪꜱ ᴜꜱᴇʀ ʜΛꜱ {num_warns}/{limit} ᴡΛʀɴꜱ, ꜰᴏʀ ᴛʜᴇ ꜰᴏʟʟᴏᴡɪɴɢ ʀᴇΛꜱᴏɴ:"
             )
             for reason in reason:
                 text += f"\n • {reason}"
@@ -296,10 +296,10 @@ def warns(update: Update, context: CallbackContext):
                 update.effective_message.reply_text(msg)
         else:
             update.effective_message.reply_text(
-                f"ᴛʜɪꜱ ᴜꜱᴇʀ ʜᴀꜱ {num_warns}/{limit} ᴡᴀʀɴꜱ, ʙᴜᴛ ɴᴏ ʀᴇᴀꜱᴏɴꜱ ꜰᴏʀ ᴀɴʏ ᴏꜰ ᴛʜᴇᴍ."
+                f"ᴛʜɪꜱ ᴜꜱᴇʀ ʜΛꜱ {num_warns}/{limit} ᴡΛʀɴꜱ, ʙᴜᴛ ɴᴏ ʀᴇΛꜱᴏɴꜱ ꜰᴏʀ Λɴʏ ᴏꜰ ᴛʜᴇᴍ."
             )
     else:
-        update.effective_message.reply_text("ᴛʜɪꜱ ᴜꜱᴇʀ ᴅᴏᴇꜱɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ ᴡᴀʀɴꜱ!")
+        update.effective_message.reply_text("ᴛʜɪꜱ ᴜꜱᴇʀ ᴅᴏᴇꜱɴ'ᴛ ʜΛᴠᴇ Λɴʏ ᴡΛʀɴꜱ!")
 
 
 # Dispatcher handler stop - do not async
@@ -357,17 +357,17 @@ def remove_warn_filter(update: Update, context: CallbackContext):
     chat_filters = sql.get_chat_warn_triggers(chat.id)
 
     if not chat_filters:
-        msg.reply_text("ɴᴏ ᴡᴀʀɴɪɴɢ ꜰɪʟᴛᴇʀꜱ ᴀʀᴇ ᴀᴄᴛɪᴠᴇ ʜᴇʀᴇ!")
+        msg.reply_text("ɴᴏ ᴡΛʀɴɪɴɢ ꜰɪʟᴛᴇʀꜱ Λʀᴇ Λᴄᴛɪᴠᴇ ʜᴇʀᴇ!")
         return
 
     for filt in chat_filters:
         if filt == to_remove:
             sql.remove_warn_filter(chat.id, to_remove)
-            msg.reply_text("ᴏᴋᴀʏ, ɪ'ʟʟ ꜱᴛᴏᴘ ᴡᴀʀɴɪɴɢ ᴘᴇᴏᴘʟᴇ ꜰᴏʀ ᴛʜᴀᴛ.")
+            msg.reply_text("ᴏᴋΛʏ, ɪ'ʟʟ ꜱᴛᴏᴘ ᴡΛʀɴɪɴɢ ᴘᴇᴏᴘʟᴇ ꜰᴏʀ ᴛʜΛᴛ.")
             raise DispatcherHandlerStop
 
     msg.reply_text(
-        "ᴛʜᴀᴛ'ꜱ ɴᴏᴛ ᴀ ᴄᴜʀʀᴇɴᴛ ᴡᴀʀɴɪɴɢ ꜰɪʟᴛᴇʀ - ʀᴜɴ /warnlist ꜰᴏʀ ᴀʟʟ ᴀᴄᴛɪᴠᴇ ᴡᴀʀɴɪɴɢ ꜰɪʟᴛᴇʀꜱ."
+        "ᴛʜΛᴛ'ꜱ ɴᴏᴛ Λ ᴄᴜʀʀᴇɴᴛ ᴡΛʀɴɪɴɢ ꜰɪʟᴛᴇʀ - ʀᴜɴ /warnlist ꜰᴏʀ Λʟʟ Λᴄᴛɪᴠᴇ ᴡΛʀɴɪɴɢ ꜰɪʟᴛᴇʀꜱ."
     )
 
 
@@ -376,7 +376,7 @@ def list_warn_filters(update: Update, context: CallbackContext):
     all_handlers = sql.get_chat_warn_triggers(chat.id)
 
     if not all_handlers:
-        update.effective_message.reply_text("ɴᴏ ᴡᴀʀɴɪɴɢ ꜰɪʟᴛᴇʀꜱ ᴀʀᴇ ᴀᴄᴛɪᴠᴇ ʜᴇʀᴇ !")
+        update.effective_message.reply_text("ɴᴏ ᴡΛʀɴɪɴɢ ꜰɪʟᴛᴇʀꜱ Λʀᴇ Λᴄᴛɪᴠᴇ ʜᴇʀᴇ !")
         return
 
     filter_list = CURRENT_WARNING_FILTER_STRING
@@ -438,15 +438,15 @@ def set_warn_limit(update: Update, context: CallbackContext) -> str:
                 return (
                     f"<b>{html.escape(chat.title)}:</b>\n"
                     f"#SET_WARN_LIMIT\n"
-                    f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
-                    f"ꜱᴇᴛ ᴛʜᴇ ᴡᴀʀɴ ʟɪᴍɪᴛ ᴛᴏ <code>{args[0]}</code>"
+                    f"<b>Λᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+                    f"ꜱᴇᴛ ᴛʜᴇ ᴡΛʀɴ ʟɪᴍɪᴛ ᴛᴏ <code>{args[0]}</code>"
                 )
         else:
-            msg.reply_text("ɢɪᴠᴇ ᴍᴇ ᴀ ɴᴜᴍʙᴇʀ ᴀꜱ ᴀɴ ᴀʀɢ!")
+            msg.reply_text("ɢɪᴠᴇ ᴍᴇ Λ ɴᴜᴍʙᴇʀ Λꜱ Λɴ Λʀɢ!")
     else:
         limit, soft_warn = sql.get_warn_setting(chat.id)
 
-        msg.reply_text("ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴡᴀʀɴ ʟɪᴍɪᴛ ɪꜱ {}".format(limit))
+        msg.reply_text("ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴡΛʀɴ ʟɪᴍɪᴛ ɪꜱ {}".format(limit))
     return ""
 
 
@@ -463,8 +463,8 @@ def set_warn_strength(update: Update, context: CallbackContext):
             msg.reply_text("Too many warns will now result in a Ban!")
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
-                f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
-                f"ʜᴀꜱ ᴇɴᴀʙʟᴇᴅ ꜱᴛʀᴏɴɢ ᴡᴀʀɴꜱ. ᴜꜱᴇʀꜱ ᴡɪʟʟ ʙᴀɴɴᴇᴅ"
+                f"<b>Λᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+                f"ʜΛꜱ ᴇɴΛʙʟᴇᴅ ꜱᴛʀᴏɴɢ ᴡΛʀɴꜱ. ᴜꜱᴇʀꜱ ᴡɪʟʟ ʙΛɴɴᴇᴅ"
             )
 
         if args[0].lower() in ("off", "no"):
@@ -474,21 +474,21 @@ def set_warn_strength(update: Update, context: CallbackContext):
             )
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
-                f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
-                f"ʜᴀꜱ ᴅɪꜱᴀʙʟᴇᴅ ʙᴀɴꜱ. ɪ ᴡɪʟʟ ᴊᴜꜱᴛ ᴋɪᴄᴋ ᴜꜱᴇʀꜱ."
+                f"<b>Λᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+                f"ʜΛꜱ ᴅɪꜱΛʙʟᴇᴅ ʙΛɴꜱ. ɪ ᴡɪʟʟ ᴊᴜꜱᴛ ᴋɪᴄᴋ ᴜꜱᴇʀꜱ."
             )
 
-        msg.reply_text("ɪ ᴏɴʟʏ ᴜɴᴅᴇʀꜱᴛᴀɴᴅꜱ on/yes/no/off!")
+        msg.reply_text("ɪ ᴏɴʟʏ ᴜɴᴅᴇʀꜱᴛΛɴᴅꜱ on/yes/no/off!")
     else:
         limit, soft_warn = sql.get_warn_setting(chat.id)
         if soft_warn:
             msg.reply_text(
-                "ᴡᴀʀɴꜱ ᴀʀᴇ ᴄᴜʀʀᴇɴᴛʟʏ ꜱᴇᴛ ᴛᴏ *ᴋɪᴄᴋ* ᴜꜱᴇʀꜱ ᴡʜᴇɴ ᴛʜᴇʏ ᴇxᴄᴇᴇᴅ ᴛʜᴇ ʟɪᴍɪᴛ.",
+                "ᴡΛʀɴꜱ Λʀᴇ ᴄᴜʀʀᴇɴᴛʟʏ ꜱᴇᴛ ᴛᴏ *ᴋɪᴄᴋ* ᴜꜱᴇʀꜱ ᴡʜᴇɴ ᴛʜᴇʏ ᴇxᴄᴇᴇᴅ ᴛʜᴇ ʟɪᴍɪᴛ.",
                 parse_mode=ParseMode.MARKDOWN,
             )
         else:
             msg.reply_text(
-                "ᴡᴀʀɴꜱ ᴀʀᴇ ᴄᴜʀʀᴇɴᴛʟʏ ꜱᴇᴛ ᴛᴏ *ʙᴀɴ* ᴜꜱᴇʀꜱ ᴡʜᴇɴ ᴛʜᴇʏ ᴇxᴄᴇᴇᴅ ᴛʜᴇ ʟɪᴍɪᴛꜱ.",
+                "ᴡΛʀɴꜱ Λʀᴇ ᴄᴜʀʀᴇɴᴛʟʏ ꜱᴇᴛ ᴛᴏ *ʙΛɴ* ᴜꜱᴇʀꜱ ᴡʜᴇɴ ᴛʜᴇʏ ᴇxᴄᴇᴇᴅ ᴛʜᴇ ʟɪᴍɪᴛꜱ.",
                 parse_mode=ParseMode.MARKDOWN,
             )
     return ""
@@ -496,8 +496,8 @@ def set_warn_strength(update: Update, context: CallbackContext):
 
 def __stats__():
     return (
-        f"× {sql.num_warns()} ᴏᴠᴇʀᴀʟʟ ᴡᴀʀɴꜱ, ᴀᴄʀᴏꜱꜱ  {sql.num_warn_chats()} ᴄʜᴀᴛꜱ.\n"
-        f"× {sql.num_warn_filters()} ᴡᴀʀɴ ꜰɪʟᴛᴇʀꜱ, ᴀᴄʀᴏꜱꜱ {sql.num_warn_filter_chats()} ᴄʜᴀᴛꜱ."
+        f"× {sql.num_warns()} ᴏᴠᴇʀΛʟʟ ᴡΛʀɴꜱ, Λᴄʀᴏꜱꜱ  {sql.num_warn_chats()} ᴄʜΛᴛꜱ.\n"
+        f"× {sql.num_warn_filters()} ᴡΛʀɴ ꜰɪʟᴛᴇʀꜱ, Λᴄʀᴏꜱꜱ {sql.num_warn_filter_chats()} ᴄʜΛᴛꜱ."
     )
 
 
@@ -515,8 +515,8 @@ def __chat_settings__(chat_id, user_id):
     num_warn_filters = sql.num_warn_chat_filters(chat_id)
     limit, soft_warn = sql.get_warn_setting(chat_id)
     return (
-        f"ᴛʜɪꜱ ᴄʜᴀᴛ ʜᴀꜱ `{num_warn_filters}` ᴡᴀʀɴ ꜰɪʟᴛᴇʀꜱ. "
-        f"ɪᴛ ᴛᴀᴋᴇꜱ `{limit}` ᴡᴀʀɴᴀ ʙᴇꜰᴏʀᴇ ᴛʜᴇ ᴜꜱᴇʀ ɢᴇᴛꜱ *{'kicked' if soft_warn else 'banned'}*."
+        f"ᴛʜɪꜱ ᴄʜΛᴛ ʜΛꜱ `{num_warn_filters}` ᴡΛʀɴ ꜰɪʟᴛᴇʀꜱ. "
+        f"ɪᴛ ᴛΛᴋᴇꜱ `{limit}` ᴡΛʀɴΛ ʙᴇꜰᴏʀᴇ ᴛʜᴇ ᴜꜱᴇʀ ɢᴇᴛꜱ *{'kicked' if soft_warn else 'banned'}*."
     )
 
 
@@ -573,7 +573,7 @@ dispatcher.add_handler(WARN_STRENGTH_HANDLER)
 dispatcher.add_handler(WARN_FILTER_HANDLER, WARN_HANDLER_GROUP)
 
 
-__mod_name__ = "𝐖ᴀʀɴs"
+__mod_name__ = "ᴡΛʀɴs"
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 

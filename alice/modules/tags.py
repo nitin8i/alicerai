@@ -73,7 +73,7 @@ async def locks_dfunc(_, message):
             return
         if not message.from_user.username:
             return await lol.edit(
-                "ᴏɴʟʏ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ᴜꜱᴇʀɴᴀᴍᴇꜱ ᴀʀᴇ ᴇʟɪɢɪʙʟᴇ ғᴏʀ ᴛᴀɢ ᴀʟᴇʀᴛ ꜱᴇʀᴠɪᴄᴇ"
+                "ᴏɴʟʏ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ᴜꜱᴇʀɴΛᴍᴇꜱ Λʀᴇ ᴇʟɪɢɪʙʟᴇ ғᴏʀ ᴛΛɢ Λʟᴇʀᴛ ꜱᴇʀᴠɪᴄᴇ"
             )
         uname = str(message.from_user.username)
         uname = uname.lower()
@@ -81,25 +81,25 @@ async def locks_dfunc(_, message):
         if not isittrue:
             tagdb.insert_one({f"teg": uname})
             return await lol.edit(
-                f"ᴛᴀɢ ᴀʟᴇʀᴛꜱ ᴇɴᴀʙʟᴇᴅ.\nWhen ꜱᴏᴍᴇᴏɴᴇ ᴛᴀɢꜱ ʏᴏᴜ ᴀꜱ @{uname} ʏᴏᴜ ᴡɪʟʟ ʙᴇ ɴᴏᴛɪғɪᴇᴅ"
+                f"ᴛΛɢ Λʟᴇʀᴛꜱ ᴇɴΛʙʟᴇᴅ.\nWhen ꜱᴏᴍᴇᴏɴᴇ ᴛΛɢꜱ ʏᴏᴜ Λꜱ @{uname} ʏᴏᴜ ᴡɪʟʟ ʙᴇ ɴᴏᴛɪғɪᴇᴅ"
             )
         else:
-            return await lol.edit("ᴛᴀɢ ᴀʟᴇʀᴛꜱ ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ ғᴏʀ ʏᴏᴜ")
+            return await lol.edit("ᴛΛɢ Λʟᴇʀᴛꜱ ΛʟʀᴇΛᴅʏ ᴇɴΛʙʟᴇᴅ ғᴏʀ ʏᴏᴜ")
     if parameter == "off" or parameter == "OFF":
         if not message.from_user:
             return
         if not message.from_user.username:
             return await lol.edit(
-                "ᴏɴʟʏ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ᴜꜱᴇʀɴᴀᴍᴇꜱ ᴀʀᴇ ᴇʟɪɢɪʙʟᴇ ғᴏʀ ᴛᴀɢ ᴀʟᴇʀᴛ ꜱᴇʀᴠɪᴄᴇ"
+                "ᴏɴʟʏ ᴜꜱᴇʀꜱ ᴡɪᴛʜ ᴜꜱᴇʀɴΛᴍᴇꜱ Λʀᴇ ᴇʟɪɢɪʙʟᴇ ғᴏʀ ᴛΛɢ Λʟᴇʀᴛ ꜱᴇʀᴠɪᴄᴇ"
             )
         uname = message.from_user.username
         uname = uname.lower()
         isittrue = tagdb.find_one({f"teg": uname})
         if isittrue:
             tagdb.delete_one({f"teg": uname})
-            return await lol.edit("ᴛᴀɢ ᴀʟᴇʀᴛꜱ ʀᴇᴍᴏᴠᴇᴅ")
+            return await lol.edit("ᴛΛɢ Λʟᴇʀᴛꜱ ʀᴇᴍᴏᴠᴇᴅ")
         else:
-            return await lol.edit("ᴛᴀɢ ᴀʟᴇʀᴛꜱ ᴀʟʀᴇᴀᴅʏ ᴅɪꜱᴀʙʟᴇᴅ ғᴏʀ ʏᴏᴜ")
+            return await lol.edit("ᴛΛɢ Λʟᴇʀᴛꜱ ΛʟʀᴇΛᴅʏ ᴅɪꜱΛʙʟᴇᴅ ғᴏʀ ʏᴏᴜ")
     else:
         await lol.edit("ᴇxᴘᴇᴄᴛᴇᴅ ᴏɴ ᴏʀ ᴏғғ 👀")
 
@@ -149,7 +149,7 @@ async def mentioned_alert(client, message):
                         )
                         await client.send_message(
                             chat,
-                            f"**🚨 ʀᴇᴍɪɴᴅᴇʀ 🚨**\n\n__ᴛʜɪꜱ ɪꜱ ᴀ ʀᴇᴍɪɴᴅᴇʀ ꜱᴇᴛ ʙʏ__ {user}\n__ʀᴇᴀꜱᴏɴ__: {reason} \n\n`ʀᴇᴍɪɴᴅᴇᴅ ᴀᴛ: {ttime}`",
+                            f"**🚨 ʀᴇᴍɪɴᴅᴇʀ 🚨**\n\n__ᴛʜɪꜱ ɪꜱ Λ ʀᴇᴍɪɴᴅᴇʀ ꜱᴇᴛ ʙʏ__ {user}\n__ʀᴇΛꜱᴏɴ__: {reason} \n\n`ʀᴇᴍɪɴᴅᴇᴅ Λᴛ: {ttime}`",
                         )
 
                         message.continue_propagation()
@@ -255,7 +255,7 @@ async def mentioned_alert(client, message):
 
                         await client.send_message(
                             id,
-                            "**🌗 ɴɪɢʜᴛ ᴍᴏᴅᴇ ᴇɴᴅᴇᴅ: `ᴄʜᴀᴛ ᴏᴘᴇɴɪɴɢ` \n\n ᴇᴠᴇʀʏᴏɴᴇ ꜱʜᴏᴜʟᴅ ʙᴇ ᴀʙʟᴇ ᴛᴏ ꜱᴇɴᴅ ᴍᴇꜱꜱᴀɢᴇꜱ.**",
+                            "**🌗 ɴɪɢʜᴛ ᴍᴏᴅᴇ ᴇɴᴅᴇᴅ: `ᴄʜΛᴛ ᴏᴘᴇɴɪɴɢ` \n\n ᴇᴠᴇʀʏᴏɴᴇ ꜱʜᴏᴜʟᴅ ʙᴇ Λʙʟᴇ ᴛᴏ ꜱᴇɴᴅ ᴍᴇꜱꜱΛɢᴇꜱ.**",
                         )
                         message.continue_propagation()
                         break
@@ -300,7 +300,7 @@ async def mentioned_alert(client, message):
                         await client.set_chat_permissions(id, ChatPermissions())
                         await client.send_message(
                             id,
-                            "**🌗ɴɪɢʜᴛ ᴍᴏᴅᴇ ꜱᴛᴀʀᴛɪɴɢ: `ᴄʜᴀᴛ ᴄʟᴏꜱᴇ ɪɴɪᴛɪᴀᴛᴇᴅ`\n\nᴏɴʟʏ ᴀᴅᴍɪɴꜱ ꜱʜᴏᴜʟᴅ ʙᴇ ᴀʙʟᴇ ᴛᴏ ꜱᴇɴᴅ ᴍᴇꜱꜱᴀɢᴇꜱ**",
+                            "**🌗ɴɪɢʜᴛ ᴍᴏᴅᴇ ꜱᴛΛʀᴛɪɴɢ: `ᴄʜΛᴛ ᴄʟᴏꜱᴇ ɪɴɪᴛɪΛᴛᴇᴅ`\n\nᴏɴʟʏ Λᴅᴍɪɴꜱ ꜱʜᴏᴜʟᴅ ʙᴇ Λʙʟᴇ ᴛᴏ ꜱᴇɴᴅ ᴍᴇꜱꜱΛɢᴇꜱ**",
                         )
                         message.continue_propagation()
                         break
@@ -324,9 +324,9 @@ async def mentioned_alert(client, message):
             return message.continue_propagation()
         user_ = message.from_user.mention or f"@{message.from_user.username}"
 
-        final_tagged_msg = f"**🔔 ʏᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ** [ᴛᴀɢɢᴇᴅ]({tagged_msg_link}) **ɪɴ** {chat_name} **ʙʏ** {user_}"
+        final_tagged_msg = f"**🔔 ʏᴏᴜ ʜΛᴠᴇ ʙᴇᴇɴ** [ᴛΛɢɢᴇᴅ]({tagged_msg_link}) **ɪɴ** {chat_name} **ʙʏ** {user_}"
         button_s = InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔔 ᴠɪᴇᴡ ᴍᴇꜱꜱᴀɢᴇ 🔔", url=tagged_msg_link)]]
+            [[InlineKeyboardButton("🔔 ᴠɪᴇᴡ ᴍᴇꜱꜱΛɢᴇ 🔔", url=tagged_msg_link)]]
         )
         # print(final_tagged_msg)
         try:
@@ -349,7 +349,7 @@ async def mentioned_alert(client, message):
 async def mentionall(event):
     chat_id = event.chat_id
     if event.is_private:
-        return await event.respond("__ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ʙᴇ ᴜsᴇ ɪɴ ɢʀᴏᴜᴘs !__")
+        return await event.respond("__ᴛʜɪs ᴄᴏᴍᴍΛɴᴅ ᴄΛɴ ʙᴇ ᴜsᴇ ɪɴ ɢʀᴏᴜᴘs !__")
 
     is_admin = False
     try:
@@ -362,10 +362,10 @@ async def mentionall(event):
         ):
             is_admin = True
     if not is_admin:
-        return await event.respond("__ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴍᴇɴᴛɪᴏɴ ᴀʟʟ !__")
+        return await event.respond("__ᴏɴʟʏ Λᴅᴍɪɴs ᴄΛɴ ᴍᴇɴᴛɪᴏɴ Λʟʟ !__")
 
     if event.pattern_match.group(1) and event.is_reply:
-        return await event.respond("__ɢɪᴠᴇ ᴍᴇ ᴏɴᴇ ᴀʀɢᴜᴍᴇɴᴛ ʙᴀʙʏ!__")
+        return await event.respond("__ɢɪᴠᴇ ᴍᴇ ᴏɴᴇ Λʀɢᴜᴍᴇɴᴛ ʙΛʙʏ!__")
     elif event.pattern_match.group(1):
         mode = "text_on_cmd"
         msg = event.pattern_match.group(1)
@@ -374,11 +374,11 @@ async def mentionall(event):
         msg = await event.get_reply_message()
         if msg == None:
             return await event.respond(
-                "__I ᴄᴀɴ'ᴛ ᴍᴇɴᴛɪᴏɴ ᴍᴇᴍʙᴇʀs ғᴏʀ ᴏʟᴅᴇʀ ᴍᴇssᴀɢᴇs! (ᴍᴇssᴀɢᴇs ᴡʜɪᴄʜ ᴀʀᴇ sᴇɴᴛ ʙᴇғᴏʀᴇ I'ᴍ ᴀᴅᴅᴇᴅ ᴛᴏ ɢʀᴏᴜᴘ)__"
+                "__I ᴄΛɴ'ᴛ ᴍᴇɴᴛɪᴏɴ ᴍᴇᴍʙᴇʀs ғᴏʀ ᴏʟᴅᴇʀ ᴍᴇssΛɢᴇs! (ᴍᴇssΛɢᴇs ᴡʜɪᴄʜ Λʀᴇ sᴇɴᴛ ʙᴇғᴏʀᴇ I'ᴍ Λᴅᴅᴇᴅ ᴛᴏ ɢʀᴏᴜᴘ)__"
             )
     else:
         return await event.respond(
-            "__ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴏᴛʜᴇʀs!__"
+            "__ʀᴇᴘʟʏ ᴛᴏ Λ ᴍᴇssΛɢᴇ ᴏʀ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴏᴛʜᴇʀs!__"
         )
 
     spam_chats.append(chat_id)
@@ -419,7 +419,7 @@ async def cancel_spam(event):
         ):
             is_admin = True
     if not is_admin:
-        return await event.respond("__ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ!__")
+        return await event.respond("__ᴏɴʟʏ Λᴅᴍɪɴs ᴄΛɴ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪs ᴄᴏᴍᴍΛɴᴅ!__")
 
     else:
         try:
@@ -429,7 +429,7 @@ async def cancel_spam(event):
         return await event.respond("__sᴛᴏᴘᴘᴇᴅ ᴍᴇɴᴛɪᴏɴ.__")
 
 
-__mod_name__ = "𝐓ᴀɢ-Aʟʟ"
+__mod_name__ = "ᴛΛɢ-Λʟʟ"
 
 from alice.modules.language import gs
 

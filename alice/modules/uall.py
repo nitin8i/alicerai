@@ -74,7 +74,7 @@ async def _(event):
     creator = chat.creator
     if event.is_private:
         return await event.respond(
-            "__ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ʙᴇ ᴜsᴇ ɪɴ ɢʀᴏᴜᴘs ᴀɴᴅ ᴄʜᴀɴɴᴇʟs!__"
+            "__ᴛʜɪs ᴄᴏᴍᴍΛɴᴅ ᴄΛɴ ʙᴇ ᴜsᴇ ɪɴ ɢʀᴏᴜᴘs Λɴᴅ ᴄʜΛɴɴᴇʟs!__"
         )
 
     is_admin = False
@@ -92,13 +92,13 @@ async def _(event):
         ):
             is_admin = True
     if not is_admin:
-        return await event.respond("__ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴜɴᴍᴜᴛᴇᴀʟʟ!__")
+        return await event.respond("__ᴏɴʟʏ Λᴅᴍɪɴs ᴄΛɴ ᴜɴᴍᴜᴛᴇΛʟʟ!__")
 
     if not admin and not creator:
-        await event.reply("`I ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ᴘᴇʀᴍɪssɪᴏɴs!`")
+        await event.reply("`I ᴅᴏɴ'ᴛ ʜΛᴠᴇ ᴇɴᴏᴜɢʜ ᴘᴇʀᴍɪssɪᴏɴs!`")
         return
 
-    done = await event.reply("sᴇᴀʀᴄʜɪɴɢ ᴘᴀʀᴛɪᴄɪᴘᴀɴᴛ ʟɪsᴛs.")
+    done = await event.reply("sᴇΛʀᴄʜɪɴɢ ᴘΛʀᴛɪᴄɪᴘΛɴᴛ ʟɪsᴛs.")
     p = 0
     async for i in telethn.iter_participants(
         event.chat_id, filter=ChannelParticipantsKicked, aggressive=True
@@ -117,9 +117,9 @@ async def _(event):
             p += 1
 
     if p == 0:
-        await done.edit("ɴᴏ ᴏɴᴇ ɪs ʙᴀɴɴᴇᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ")
+        await done.edit("ɴᴏ ᴏɴᴇ ɪs ʙΛɴɴᴇᴅ ɪɴ ᴛʜɪs ᴄʜΛᴛ")
         return
-    required_string = "sᴜᴄᴄᴇssғᴜʟʟʏ ᴜɴʙᴀɴɴᴇᴅ **{}** ᴜsᴇʀs"
+    required_string = "sᴜᴄᴄᴇssғᴜʟʟʏ ᴜɴʙΛɴɴᴇᴅ **{}** ᴜsᴇʀs"
     await event.reply(required_string.format(p))
 
 
@@ -128,7 +128,7 @@ async def _(event):
 async def _(event):
     if event.is_private:
         return await event.respond(
-            "__ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ʙᴇ ᴜsᴇ ɪɴ ɢʀᴏᴜᴘꜱ ᴀɴᴅ ᴄʜᴀɴɴᴇʟꜱ!__"
+            "__ᴛʜɪs ᴄᴏᴍᴍΛɴᴅ ᴄΛɴ ʙᴇ ᴜsᴇ ɪɴ ɢʀᴏᴜᴘꜱ Λɴᴅ ᴄʜΛɴɴᴇʟꜱ!__"
         )
 
     is_admin = False
@@ -146,14 +146,14 @@ async def _(event):
         ):
             is_admin = True
     if not is_admin:
-        return await event.respond("__ᴏɴʟʏ ᴀᴅᴍɪɴꜱ ᴄᴀɴ ᴜɴᴍᴜᴛᴇᴀʟʟ!__")
+        return await event.respond("__ᴏɴʟʏ Λᴅᴍɪɴꜱ ᴄΛɴ ᴜɴᴍᴜᴛᴇΛʟʟ!__")
     chat = await event.get_chat()
     admin = chat.admin_rights.ban_users
     creator = chat.creator
 
     # Well
     if not admin and not creator:
-        await event.reply("`I ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ᴘᴇʀᴍɪꜱꜱɪᴏɴꜱ!`")
+        await event.reply("`I ᴅᴏɴ'ᴛ ʜΛᴠᴇ ᴇɴᴏᴜɢʜ ᴘᴇʀᴍɪꜱꜱɪᴏɴꜱ!`")
         return
 
     done = await event.reply("ᴡᴏʀᴋɪɴɢ ...")
@@ -178,7 +178,7 @@ async def _(event):
             p += 1
 
     if p == 0:
-        await done.edit("ɴᴏ ᴏɴᴇ ɪꜱ ᴍᴜᴛᴇᴅ ɪɴ ᴛʜɪꜱ ᴄʜᴀᴛ")
+        await done.edit("ɴᴏ ᴏɴᴇ ɪꜱ ᴍᴜᴛᴇᴅ ɪɴ ᴛʜɪꜱ ᴄʜΛᴛ")
         return
     required_string = "ꜱᴜᴄᴄᴇꜱꜱғᴜʟʟʏ ᴜɴᴍᴜᴛᴇᴅ **{}** ᴜꜱᴇʀꜱ"
     await event.reply(required_string.format(p))
@@ -195,7 +195,7 @@ async def get_users(show):
     mentions = f"ᴜꜱᴇʀꜱ ɪɴ {title}: \n"
     async for user in telethn.iter_participants(show.chat_id):
         mentions += (
-            f"\n ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛ {user.id}"
+            f"\n ᴅᴇʟᴇᴛᴇᴅ Λᴄᴄᴏᴜɴᴛ {user.id}"
             if user.deleted
             else f"\n[{user.first_name}](tg://user?id={user.id}) {user.id}"
         )
@@ -212,7 +212,7 @@ async def get_users(show):
     os.remove("userslist.txt")
 
 
-__mod_name__ = "𝐔ᴀʟʟ"
+__mod_name__ = "ᴜΛʟʟ"
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 

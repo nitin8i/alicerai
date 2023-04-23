@@ -167,7 +167,7 @@ def chats(update: Update, context: CallbackContext):
         update.effective_message.reply_document(
             document=output,
             filename="groups_list.txt",
-            caption="ʜᴇʀᴇ ʙᴇ ᴛʜᴇ ʟɪꜱᴛ ᴏꜰ ɢʀᴏᴜᴘꜱ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀꜱᴇ.",
+            caption="ʜᴇʀᴇ ʙᴇ ᴛʜᴇ ʟɪꜱᴛ ᴏꜰ ɢʀᴏᴜᴘꜱ ɪɴ ᴍʏ ᴅΛᴛΛʙΛꜱᴇ.",
         )
 
 
@@ -191,14 +191,14 @@ def __user_info__(user_id):
 
 
 def __stats__():
-    return f"× 0{user_db.num_users()} ᴜsᴇʀs, ᴀᴄʀᴏss 0{user_db.num_chats()} ᴄʜᴀᴛs"
+    return f"× 0{user_db.num_users()} ᴜsᴇʀs, Λᴄʀᴏss 0{user_db.num_chats()} ᴄʜΛᴛs"
 
 
 def __migrate__(old_chat_id, new_chat_id):
     user_db.migrate_chat(old_chat_id, new_chat_id)
 
 
-__mod_name__ = "𝐆-ᴄᴀsᴛ"
+__mod_name__ = "ɢ-ᴄΛsᴛ"
 
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ

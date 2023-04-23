@@ -103,33 +103,33 @@ async def profanity(event):
     input = event.pattern_match.group(2)
     if not event.sender_id == OWNER_ID:
         if not await is_register_admin(event.input_chat, event.sender_id):
-            await event.reply("ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ!")
+            await event.reply("ᴏɴʟʏ Λᴅᴍɪɴs ᴄΛɴ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪs ᴄᴏᴍᴍΛɴᴅ!")
             return
         if not await can_change_info(message=event):
             await event.reply(
-                "ʏᴏᴜ ᴀʀᴇ ᴍɪssɪɴɢ ᴛʜᴇ ғᴏʟʟᴏᴡɪɴɢ ʀɪɢʜᴛs ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ : CanChangeinfo"
+                "ʏᴏᴜ Λʀᴇ ᴍɪssɪɴɢ ᴛʜᴇ ғᴏʟʟᴏᴡɪɴɢ ʀɪɢʜᴛs ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍΛɴᴅ : CanChangeinfo"
             )
             return
     if not input:
         if is_nightmode_indb(str(event.chat_id)):
-            await event.reply("ᴄᴜʀʀᴇɴᴛʟʏ ɴɪɢʜᴛᴍᴏᴅᴇ ɪs ᴇɴᴀʙʟᴇᴅ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ")
+            await event.reply("ᴄᴜʀʀᴇɴᴛʟʏ ɴɪɢʜᴛᴍᴏᴅᴇ ɪs ᴇɴΛʙʟᴇᴅ ғᴏʀ ᴛʜɪs ᴄʜΛᴛ")
             return
-        await event.reply("ᴄᴜʀʀᴇɴᴛʟʏ ɴɪɢʜᴛᴍᴏᴅᴇ ɪs ᴅɪsᴀʙʟᴇᴅ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ")
+        await event.reply("ᴄᴜʀʀᴇɴᴛʟʏ ɴɪɢʜᴛᴍᴏᴅᴇ ɪs ᴅɪsΛʙʟᴇᴅ ғᴏʀ ᴛʜɪs ᴄʜΛᴛ")
         return
     if "on" in input and event.is_group:
         if is_nightmode_indb(str(event.chat_id)):
-            await event.reply("ɴɪɢʜᴛ ᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴛᴜʀɴᴇᴅ ᴏɴ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ")
+            await event.reply("ɴɪɢʜᴛ ᴍᴏᴅᴇ ɪs ΛʟʀᴇΛᴅʏ ᴛᴜʀɴᴇᴅ ᴏɴ ғᴏʀ ᴛʜɪs ᴄʜΛᴛ")
             return
         add_nightmode(str(event.chat_id))
-        await event.reply("ɴɪɢʜᴛᴍᴏᴅᴇ ᴛᴜʀɴᴇᴅ ᴏɴ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ.")
+        await event.reply("ɴɪɢʜᴛᴍᴏᴅᴇ ᴛᴜʀɴᴇᴅ ᴏɴ ғᴏʀ ᴛʜɪs ᴄʜΛᴛ.")
     if "off" in input:
         if event.is_group and not is_nightmode_indb(str(event.chat_id)):
-            await event.reply("ɴɪɢʜᴛ ᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴏғғ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ")
+            await event.reply("ɴɪɢʜᴛ ᴍᴏᴅᴇ ɪs ΛʟʀᴇΛᴅʏ ᴏғғ ғᴏʀ ᴛʜɪs ᴄʜΛᴛ")
             return
         rmnightmode(str(event.chat_id))
-        await event.reply("ɴɪɢʜᴛᴍᴏᴅᴇ ᴅɪsᴀʙʟᴇᴅ!")
+        await event.reply("ɴɪɢʜᴛᴍᴏᴅᴇ ᴅɪsΛʙʟᴇᴅ!")
     if not "off" in input and not "on" in input:
-        await event.reply("ᴘʟᴇᴀsᴇ sᴘᴇᴄɪғʏ ᴏɴ ᴏʀ ᴏғғ!")
+        await event.reply("ᴘʟᴇΛsᴇ sᴘᴇᴄɪғʏ ᴏɴ ᴏʀ ᴏғғ!")
         return
 
 
@@ -141,7 +141,7 @@ async def job_close():
         try:
             await telethn.send_message(
                 int(pro.chat_id),
-                "🌗 ɴɪɢʜᴛ ᴍᴏᴅᴇ sᴛᴀʀᴛɪɴɢ: <code>ᴄʟᴏsɪɴɢ sᴛɪᴄᴋᴇʀs ᴀɴᴅ ᴍᴇᴅɪᴀ sᴇɴᴅ ᴘᴇʀᴍɪssɪᴏɴs ᴜɴᴛɪʟ 06:00ᴀᴍ</code>\n\n",
+                "🌗 ɴɪɢʜᴛ ᴍᴏᴅᴇ sᴛΛʀᴛɪɴɢ: <code>ᴄʟᴏsɪɴɢ sᴛɪᴄᴋᴇʀs Λɴᴅ ᴍᴇᴅɪΛ sᴇɴᴅ ᴘᴇʀᴍɪssɪᴏɴs ᴜɴᴛɪʟ 06:00Λᴍ</code>\n\n",
                 parse_mode=ParseMode.HTML,
             )
             await telethn(
@@ -150,7 +150,7 @@ async def job_close():
                 )
             )
         except Exception as e:
-            LOGGER.info(f"ᴜɴᴀʙʟᴇ ᴛᴏ ᴄʟᴏsᴇ ɢʀᴏᴜᴘ {chat} - {e}")
+            LOGGER.info(f"ᴜɴΛʙʟᴇ ᴛᴏ ᴄʟᴏsᴇ ɢʀᴏᴜᴘ {chat} - {e}")
 
 
 # Run everyday at 12am
@@ -167,7 +167,7 @@ async def job_open():
         try:
             await telethn.send_message(
                 int(pro.chat_id),
-                "🌗 ɴɪɢʜᴛ ᴍᴏᴅᴇ ᴇɴᴅᴇᴅ: <code>ᴄʜᴀᴛ ᴏᴘᴇɴɪɴɢ</code>\n\nᴇᴠᴇʀʏᴏɴᴇ sʜᴏᴜʟᴅ ʙᴇ ᴀʙʟᴇ ᴛᴏ sᴇɴᴅ ᴍᴇssᴀɢᴇs",
+                "🌗 ɴɪɢʜᴛ ᴍᴏᴅᴇ ᴇɴᴅᴇᴅ: <code>ᴄʜΛᴛ ᴏᴘᴇɴɪɴɢ</code>\n\nᴇᴠᴇʀʏᴏɴᴇ sʜᴏᴜʟᴅ ʙᴇ Λʙʟᴇ ᴛᴏ sᴇɴᴅ ᴍᴇssΛɢᴇs",
                 parse_mode=ParseMode.HTML,
             )
             await telethn(
@@ -176,7 +176,7 @@ async def job_open():
                 )
             )
         except Exception as e:
-            logger.info(f"ᴜɴᴀʙʟᴇ ᴛᴏ ᴏᴘᴇɴ ɢʀᴏᴜᴘ {pro.chat_id} - {e}")
+            logger.info(f"ᴜɴΛʙʟᴇ ᴛᴏ ᴏᴘᴇɴ ɢʀᴏᴜᴘ {pro.chat_id} - {e}")
 
 
 # Run everyday at 06
@@ -185,7 +185,7 @@ scheduler.add_job(job_open, trigger="cron", hour=5, minute=59)
 scheduler.start()
 
 
-__mod_name__ = "𝐍-ᴍᴏᴅᴇ"
+__mod_name__ = "ɴ-ᴍᴏᴅᴇ"
 
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ

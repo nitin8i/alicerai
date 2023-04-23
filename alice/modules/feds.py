@@ -2414,7 +2414,7 @@ def fed_user_help(update: Update, context: CallbackContext):
     )
 
 
-__mod_name__ = "𝐅ᴇᴅs "
+__mod_name__ = "ғᴇᴅs "
 
 from alice.modules.language import gs
 
@@ -2458,7 +2458,7 @@ def fed_help(update: Update, context: CallbackContext):
             [
                 [
                     InlineKeyboardButton(
-                        text="ʙᴀᴄᴋ",
+                        text="ʙΛᴄᴋ",
                         callback_data=f"help_module({__mod_name__.lower()})",
                     )
                 ]
@@ -2472,7 +2472,7 @@ def get_help(chat):
     return [
         gs(chat, "feds_help"),
         [
-            InlineKeyboardButton(text="ғᴇᴅᴀᴅᴍɪɴ", callback_data="fed_help_admin"),
+            InlineKeyboardButton(text="ғᴇᴅΛᴅᴍɪɴ", callback_data="fed_help_admin"),
             InlineKeyboardButton(text="ғᴇᴅᴏᴡɴᴇʀ", callback_data="fed_help_owner"),
         ],
         [InlineKeyboardButton(text="ᴜsᴇʀs", callback_data="fed_help_user")],

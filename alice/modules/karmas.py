@@ -86,7 +86,7 @@ async def upvote(_, message):
     new_karma = {"karma": karma}
     await update_karma(chat_id, await int_to_alpha(user_id), new_karma)
     await message.reply_text(
-        f"ɪɴᴄʀᴇᴍᴇɴᴛᴇᴅ ᴋᴀʀᴍᴀ ᴏғ {user_mention} ʙʏ 1.\n**ᴛᴏᴛᴀʟ ᴩᴏɪɴᴛs :** {karma}"
+        f"ɪɴᴄʀᴇᴍᴇɴᴛᴇᴅ ᴋΛʀᴍΛ ᴏғ {user_mention} ʙʏ 1.\n**ᴛᴏᴛΛʟ ᴩᴏɪɴᴛs :** {karma}"
     )
 
 
@@ -108,7 +108,7 @@ async def downvote(_, message):
     if not message.from_user:
         return
     if message.reply_to_message.from_user.id == OWNER_ID:
-        await message.reply_text("ɪ ᴋɴᴏᴡ ʜɪᴍ, sᴏ ɪ'ᴍ ɴᴏᴛ ɢᴏɴɴᴀ ᴅᴏ ᴛʜᴀᴛ ʙᴀʙʏ.")
+        await message.reply_text("ɪ ᴋɴᴏᴡ ʜɪᴍ, sᴏ ɪ'ᴍ ɴᴏᴛ ɢᴏɴɴΛ ᴅᴏ ᴛʜΛᴛ ʙΛʙʏ.")
         return
     if message.reply_to_message.from_user.id == message.from_user.id:
         return
@@ -123,7 +123,7 @@ async def downvote(_, message):
     new_karma = {"karma": karma}
     await update_karma(message.chat.id, await int_to_alpha(user_id), new_karma)
     await message.reply_text(
-        f"ᴅᴇᴄʀᴇᴍᴇɴᴛᴇᴅ ᴋᴀʀᴍᴀ ᴏғ {user_mention} ʙʏ 1.\n**ᴛᴏᴛᴀʟ ᴩᴏɪɴᴛs :** {karma}"
+        f"ᴅᴇᴄʀᴇᴍᴇɴᴛᴇᴅ ᴋΛʀᴍΛ ᴏғ {user_mention} ʙʏ 1.\n**ᴛᴏᴛΛʟ ᴩᴏɪɴᴛs :** {karma}"
     )
 
 
@@ -131,12 +131,12 @@ async def downvote(_, message):
 async def command_karma(_, message):
     chat_id = message.chat.id
     if not message.reply_to_message:
-        m = await message.reply_text("ɢᴇᴛᴛɪɴɢ ᴋᴀʀᴍᴀ ʟɪsᴛ ᴏғ ᴛᴏᴘ 10 ᴜsᴇʀs ᴡᴀɪᴛ...")
+        m = await message.reply_text("ɢᴇᴛᴛɪɴɢ ᴋΛʀᴍΛ ʟɪsᴛ ᴏғ ᴛᴏᴘ 10 ᴜsᴇʀs ᴡΛɪᴛ...")
         karma = await get_karmas(chat_id)
         if not karma:
-            await m.edit("ɴᴏ ᴋᴀʀᴍᴀ ɪɴ ᴅʙ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ.")
+            await m.edit("ɴᴏ ᴋΛʀᴍΛ ɪɴ ᴅʙ ғᴏʀ ᴛʜɪs ᴄʜΛᴛ.")
             return
-        msg = f"🏆 **ᴋᴀʀᴍᴀ ʟɪsᴛ ᴏғ {message.chat.title}**\n"
+        msg = f"🏆 **ᴋΛʀᴍΛ ʟɪsᴛ ᴏғ {message.chat.title}**\n"
         limit = 0
         karma_dicc = {}
         for i in karma:
@@ -151,7 +151,7 @@ async def command_karma(_, message):
                 )
             )
         if not karma_dicc:
-            await m.edit("ɴᴏ ᴋᴀʀᴍᴀ ɪɴ ᴅʙ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ.")
+            await m.edit("ɴᴏ ᴋΛʀᴍΛ ɪɴ ᴅʙ ғᴏʀ ᴛʜɪs ᴄʜΛᴛ.")
             return
         for user_idd, karma_count in karma_arranged.items():
             if limit > 9:
@@ -173,24 +173,24 @@ async def command_karma(_, message):
         karma = await get_karma(chat_id, await int_to_alpha(user_id))
         if karma:
             karma = karma["karma"]
-            await message.reply_text(f"**ᴛᴏᴛᴀʟ ᴘᴏɪɴᴛs**: __{karma}__")
+            await message.reply_text(f"**ᴛᴏᴛΛʟ ᴘᴏɪɴᴛs**: __{karma}__")
         else:
             karma = 0
-            await message.reply_text(f"**ᴛᴏᴛᴀʟ ᴘᴏɪɴᴛs**: __{karma}__")
+            await message.reply_text(f"**ᴛᴏᴛΛʟ ᴘᴏɪɴᴛs**: __{karma}__")
 
 
 @rishabh.on_message(filters.command("karma") & ~filters.private)
 async def captcha_state(_, message):
-    usage = "**ᴜsᴀɢᴇ:**\n/karma [ON|OFF]"
+    usage = "**ᴜsΛɢᴇ:**\n/karma [ON|OFF]"
     if len(message.command) != 2:
         return await message.reply_text(usage)
     state = message.text.split(None, 1)[1].strip()
     state = state.lower()
     if state == "on":
         await karma_on(message.chat.id)
-        await message.reply_text("ᴇɴᴀʙʟᴇᴅ ᴋᴀʀᴍᴀ sʏsᴛᴇᴍ.")
+        await message.reply_text("ᴇɴΛʙʟᴇᴅ ᴋΛʀᴍΛ sʏsᴛᴇᴍ.")
     elif state == "off":
         await karma_off(message.chat.id)
-        await message.reply_text("ᴅɪsᴀʙʟᴇᴅ ᴋᴀʀᴍᴀ sʏsᴛᴇᴍ.")
+        await message.reply_text("ᴅɪsΛʙʟᴇᴅ ᴋΛʀᴍΛ sʏsᴛᴇᴍ.")
     else:
         await message.reply_text(usage)

@@ -71,10 +71,10 @@ async def fsub(event):
     if event.is_group:
         perm = await event.client.get_permissions(event.chat_id, event.sender_id)
         if not perm.is_admin:
-            return await event.reply("ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ʙᴇ ᴀɴ ᴀᴅᴍɪɴ ᴛᴏ ᴅᴏ ᴛʜɪs.")
+            return await event.reply("ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ ʙᴇ Λɴ Λᴅᴍɪɴ ᴛᴏ ᴅᴏ ᴛʜɪs.")
         if not perm.is_creator:
             return await event.reply(
-                "❗ <b>ɢʀᴏᴜᴘ ᴄʀᴇᴀᴛᴏʀ ʀᴇǫᴜɪʀᴇᴅ</b> \n<i>ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ʙᴇ ᴛʜᴇ ɢʀᴏᴜᴘ ᴄʀᴇᴀᴛᴏʀ ᴛᴏ ᴅᴏ ᴛʜᴀᴛ.</i>",
+                "❗ <b>ɢʀᴏᴜᴘ ᴄʀᴇΛᴛᴏʀ ʀᴇǫᴜɪʀᴇᴅ</b> \n<i>ʏᴏᴜ ʜΛᴠᴇ ᴛᴏ ʙᴇ ᴛʜᴇ ɢʀᴏᴜᴘ ᴄʀᴇΛᴛᴏʀ ᴛᴏ ᴅᴏ ᴛʜΛᴛ.</i>",
                 parse_mode="html",
             )
     try:
@@ -85,38 +85,38 @@ async def fsub(event):
         chat_db = db.fs_settings(event.chat_id)
         if not chat_db:
             await event.reply(
-                "<b>❌ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ɪs ᴅɪsᴀʙʟᴇᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ.</b>", parse_mode="HTML"
+                "<b>❌ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ɪs ᴅɪsΛʙʟᴇᴅ ɪɴ ᴛʜɪs ᴄʜΛᴛ.</b>", parse_mode="HTML"
             )
         else:
             await event.reply(
-                f"ғᴏʀᴄᴇsᴜʙsᴄʀɪʙᴇ ɪs ᴄᴜʀʀᴇɴᴛʟʏ <b>ᴇɴᴀʙʟᴇᴅ</b>. ᴜsᴇʀs ᴀʀᴇ ғᴏʀᴄᴇᴅ ᴛᴏ ᴊᴏɪɴ <b>@{chat_db.channel}</b> ᴛᴏ sᴘᴇᴀᴋ ʜᴇʀᴇ.",
+                f"ғᴏʀᴄᴇsᴜʙsᴄʀɪʙᴇ ɪs ᴄᴜʀʀᴇɴᴛʟʏ <b>ᴇɴΛʙʟᴇᴅ</b>. ᴜsᴇʀs Λʀᴇ ғᴏʀᴄᴇᴅ ᴛᴏ ᴊᴏɪɴ <b>@{chat_db.channel}</b> ᴛᴏ sᴘᴇΛᴋ ʜᴇʀᴇ.",
                 parse_mode="html",
             )
     elif channel in ["on", "yes", "y"]:
-        await event.reply("❗ᴘʟᴇᴀsᴇ sᴘᴇᴄɪғʏ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ ᴜsᴇʀɴᴀᴍᴇ.")
+        await event.reply("❗ᴘʟᴇΛsᴇ sᴘᴇᴄɪғʏ ᴛʜᴇ ᴄʜΛɴɴᴇʟ ᴜsᴇʀɴΛᴍᴇ.")
     elif channel in ["off", "no", "n"]:
-        await event.reply("**❌ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ɪs ᴅɪsᴀʙʟᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.**")
+        await event.reply("**❌ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ɪs ᴅɪsΛʙʟᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.**")
         db.disapprove(event.chat_id)
     else:
         try:
             channel_entity = await event.client.get_entity(channel)
         except:
             return await event.reply(
-                "❗<b>ɪɴᴠᴀʟɪᴅ ᴄʜᴀɴɴᴇʟ ᴜsᴇʀɴᴀᴍᴇ ᴘʀᴏᴠɪᴅᴇᴅ.</b>", parse_mode="html"
+                "❗<b>ɪɴᴠΛʟɪᴅ ᴄʜΛɴɴᴇʟ ᴜsᴇʀɴΛᴍᴇ ᴘʀᴏᴠɪᴅᴇᴅ.</b>", parse_mode="html"
             )
         channel = channel_entity.username
         try:
             if not channel_entity.broadcast:
-                return await event.reply("ᴛʜᴀᴛ's ɴᴏᴛ ᴀ ᴠᴀʟɪᴅ ᴄʜᴀɴɴᴇʟ.")
+                return await event.reply("ᴛʜΛᴛ's ɴᴏᴛ Λ ᴠΛʟɪᴅ ᴄʜΛɴɴᴇʟ.")
         except:
-            return await event.reply("ᴛʜᴀᴛ's ɴᴏᴛ ᴀ ᴠᴀʟɪᴅ ᴄʜᴀɴɴᴇʟ.")
+            return await event.reply("ᴛʜΛᴛ's ɴᴏᴛ Λ ᴠΛʟɪᴅ ᴄʜΛɴɴᴇʟ.")
         if not await participant_check(channel, BOT_ID):
             return await event.reply(
-                f"❗**ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ**\nI ᴀᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴇ [ᴄʜᴀɴɴᴇʟ](https://t.me/{channel}). ᴀᴅᴅ ᴍᴇ ᴀs ᴀ ᴀᴅᴍɪɴ ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ᴇɴᴀʙʟᴇ ғᴏʀᴄᴇsᴜʙsᴄʀɪʙᴇ.",
+                f"❗**ɴᴏᴛ Λɴ Λᴅᴍɪɴ ɪɴ ᴛʜᴇ ᴄʜΛɴɴᴇʟ**\nI Λᴍ ɴᴏᴛ Λɴ Λᴅᴍɪɴ ɪɴ ᴛʜᴇ [ᴄʜΛɴɴᴇʟ](https://t.me/{channel}). Λᴅᴅ ᴍᴇ Λs Λ Λᴅᴍɪɴ ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ᴇɴΛʙʟᴇ ғᴏʀᴄᴇsᴜʙsᴄʀɪʙᴇ.",
                 link_preview=False,
             )
         db.add_channel(event.chat_id, str(channel))
-        await event.reply(f"✅ **ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ɪs ᴇɴᴀʙʟᴇᴅ** to @{channel}.")
+        await event.reply(f"✅ **ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ɪs ᴇɴΛʙʟᴇᴅ** to @{channel}.")
 
 
 @Rani.on(events.NewMessage())
@@ -144,10 +144,10 @@ async def fsub_n(e):
     except ChatAdminRequiredError:
         return
     if not check:
-        buttons = [Button.url("ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", f"t.me/{channel}")], [
+        buttons = [Button.url("ᴊᴏɪɴ ᴄʜΛɴɴᴇʟ", f"t.me/{channel}")], [
             Button.inline("ᴜɴᴍᴜᴛᴇ ᴍᴇ", data="fs_{}".format(str(e.sender_id)))
         ]
-        txt = f'<b><a href="tg://user?id={e.sender_id}">{e.sender.first_name}</a></b>, ʏᴏᴜ ʜᴀᴠᴇ <b>ɴᴏᴛ sᴜʙsᴄʀɪʙᴇᴅ</b> ᴛᴏ ᴏᴜʀ <b><a href="t.me/{channel}">ᴄʜᴀɴɴᴇʟ</a></b> ʏᴇᴛ❗.ᴘʟᴇᴀsᴇ <b><a href="t.me/{channel}">ᴊᴏɪɴ</a></b> ᴀɴᴅ <b>ᴘʀᴇss ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ</b> ᴛᴏ ᴜɴᴍᴜᴛᴇ ʏᴏᴜʀsᴇʟғ.'
+        txt = f'<b><a href="tg://user?id={e.sender_id}">{e.sender.first_name}</a></b>, ʏᴏᴜ ʜΛᴠᴇ <b>ɴᴏᴛ sᴜʙsᴄʀɪʙᴇᴅ</b> ᴛᴏ ᴏᴜʀ <b><a href="t.me/{channel}">ᴄʜΛɴɴᴇʟ</a></b> ʏᴇᴛ❗.ᴘʟᴇΛsᴇ <b><a href="t.me/{channel}">ᴊᴏɪɴ</a></b> Λɴᴅ <b>ᴘʀᴇss ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ</b> ᴛᴏ ᴜɴᴍᴜᴛᴇ ʏᴏᴜʀsᴇʟғ.'
         await e.reply(txt, buttons=buttons, parse_mode="html", link_preview=False)
         await e.client.edit_permissions(e.chat_id, e.sender_id, send_messages=False)
 
@@ -156,7 +156,7 @@ async def fsub_n(e):
 async def unmute_fsub(event):
     user_id = int(((event.pattern_match.group(1)).decode()).split("_", 1)[1])
     if not event.sender_id == user_id:
-        return await event.answer("ᴛʜɪs ɪs ɴᴏᴛ ᴍᴇᴀɴᴛ ғᴏʀ ʏᴏᴜ.", alert=True)
+        return await event.answer("ᴛʜɪs ɪs ɴᴏᴛ ᴍᴇΛɴᴛ ғᴏʀ ʏᴏᴜ.", alert=True)
     channel = (db.fs_settings(event.chat_id)).get("channel")
     try:
         check = await participant_check(channel, user_id)
@@ -165,7 +165,7 @@ async def unmute_fsub(event):
         return
     if not check:
         return await event.answer(
-            "ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴊᴏɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ ғɪʀsᴛ, ᴛᴏ ɢᴇᴛ ᴜɴᴍᴜᴛᴇᴅ!", alert=True
+            "ʏᴏᴜ ʜΛᴠᴇ ᴛᴏ ᴊᴏɪɴ ᴛʜᴇ ᴄʜΛɴɴᴇʟ ғɪʀsᴛ, ᴛᴏ ɢᴇᴛ ᴜɴᴍᴜᴛᴇᴅ!", alert=True
         )
     try:
         await event.client.edit_permissions(event.chat_id, user_id, send_messages=True)
@@ -174,7 +174,7 @@ async def unmute_fsub(event):
     await event.delete()
 
 
-__mod_name__ = "𝐅-sᴜʙ"
+__mod_name__ = "ғ-sᴜʙ"
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 

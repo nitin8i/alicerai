@@ -98,7 +98,7 @@ def get_readable_time(seconds: int) -> str:
     count = 0
     ping_time = ""
     time_list = []
-    time_suffix_list = ["s", "ᴍ", "ʜ", "ᴅᴀʏs"]
+    time_suffix_list = ["s", "ᴍ", "ʜ", "ᴅΛʏs"]
 
     while count < 4:
         count += 1
@@ -171,7 +171,7 @@ def get_id(update: Update, context: CallbackContext):
 
             msg.reply_text(
                 f"× <b>ꜱᴇɴᴅᴇʀ:</b> {mention_html(user2.id, user2.first_name)} - <code>{user2.id}</code>.\n"
-                f"× <b>ꜰᴏʀᴡᴀʀᴅᴇʀ:</b> {mention_html(user1.id, user1.first_name)} - <code>{user1.id}</code>.",
+                f"× <b>ꜰᴏʀᴡΛʀᴅᴇʀ:</b> {mention_html(user1.id, user1.first_name)} - <code>{user1.id}</code>.",
                 parse_mode=ParseMode.HTML,
             )
 
@@ -217,18 +217,18 @@ async def group_info(event) -> None:
         return
     msg = f"**ɪᴅ**: `{entity.id}`"
     msg += f"\n**ᴛɪᴛʟᴇ**: `{entity.title}`"
-    msg += f"\n**ᴅᴀᴛᴀᴄᴇɴᴛᴇʀ**: `{entity.photo.dc_id}`"
+    msg += f"\n**ᴅΛᴛΛᴄᴇɴᴛᴇʀ**: `{entity.photo.dc_id}`"
     msg += f"\n**ᴠɪᴅᴇᴏ ᴘꜰᴘ**: `{entity.photo.has_video}`"
     msg += f"\n**ꜱᴜᴘᴇʀɢʀᴏᴜᴘ**: `{entity.megagroup}`"
     msg += f"\n**ʀᴇꜱᴛʀɪᴄᴛᴇᴅ**: `{entity.restricted}`"
-    msg += f"\n**ꜱᴄᴀᴍ**: `{entity.scam}`"
+    msg += f"\n**ꜱᴄΛᴍ**: `{entity.scam}`"
     msg += f"\n**ꜱʟᴏᴡᴍᴏᴅᴇ**: `{entity.slowmode_enabled}`"
     if entity.username:
-        msg += f"\n**ᴜꜱᴇʀɴᴀᴍᴇ**: {entity.username}"
-    msg += "\n\n**ᴍᴇᴍʙᴇʀ ꜱᴛᴀᴛꜱ:**"
-    msg += f"\n`ᴀᴅᴍɪɴꜱ:` `{len(totallist)}`"
+        msg += f"\n**ᴜꜱᴇʀɴΛᴍᴇ**: {entity.username}"
+    msg += "\n\n**ᴍᴇᴍʙᴇʀ ꜱᴛΛᴛꜱ:**"
+    msg += f"\n`Λᴅᴍɪɴꜱ:` `{len(totallist)}`"
     msg += f"\n`ᴜꜱᴇʀꜱ`: `{totallist.total}`"
-    msg += "\n\n**ᴀᴅᴍɪɴꜱ ʟɪꜱᴛ:**"
+    msg += "\n\n**Λᴅᴍɪɴꜱ ʟɪꜱᴛ:**"
     for x in totallist:
         msg += f"\n• [{x.id}](tg://user?id={x.id})"
     msg += f"\n\n**ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ**:\n`{ch_full.full_chat.about}`"
@@ -269,25 +269,25 @@ def info(update: Update, context: CallbackContext):
             and not message.parse_entities([MessageEntity.TEXT_MENTION])
         )
     ):
-        message.reply_text("ɪ ᴄᴀɴ'ᴛ ᴇxᴛʀᴀᴄᴛ ᴀ ᴜꜱᴇʀ ꜰʀᴏᴍ ᴛʜɪꜱ.")
+        message.reply_text("ɪ ᴄΛɴ'ᴛ ᴇxᴛʀΛᴄᴛ Λ ᴜꜱᴇʀ ꜰʀᴏᴍ ᴛʜɪꜱ.")
         return
 
     else:
         return
 
-    rep = message.reply_text("<code>ᴀᴘᴘʀᴀɪꜱɪɴɢ...</code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code>ΛᴘᴘʀΛɪꜱɪɴɢ...</code>", parse_mode=ParseMode.HTML)
 
     text = (
         f"╔━⊰✦✪「 <b> Appraisal Results:</b> 」✪✦⊱━╗\n"
         f"➻ ɪᴅ: <code>{user.id}</code>\n"
-        f"➻ ꜰɪʀꜱᴛ ɴᴀᴍᴇ: {html.escape(user.first_name)}"
+        f"➻ ꜰɪʀꜱᴛ ɴΛᴍᴇ: {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\n➻ ʟᴀꜱᴛ ɴᴀᴍᴇ: {html.escape(user.last_name)}"
+        text += f"\n➻ ʟΛꜱᴛ ɴΛᴍᴇ: {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n➻ ᴜꜱᴇʀɴᴀᴍᴇ: @{html.escape(user.username)}"
+        text += f"\n➻ ᴜꜱᴇʀɴΛᴍᴇ: @{html.escape(user.username)}"
 
     text += f"\n➻ ᴜꜱᴇʀʟɪɴᴋ: {mention_html(user.id, 'link')}"
 
@@ -305,24 +305,24 @@ def info(update: Update, context: CallbackContext):
             elif status == "member":
                 text += _stext.format("ᴅᴇᴛᴇᴄᴛᴇᴅ")
             elif status in {"administrator", "creator"}:
-                text += _stext.format("ᴀᴅᴍɪɴ")
+                text += _stext.format("Λᴅᴍɪɴ")
     if user_id not in [bot.id, 777000, 1087968824]:
         userhp = hpmanager(user)
-        text += f"\n\n<b>ʜᴇᴀʟᴛʜ:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
+        text += f"\n\n<b>ʜᴇΛʟᴛʜ:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
 
     try:
         spamwtc = sw.get_ban(int(user.id))
         if spamwtc:
-            text += "\n\n<b>ᴛʜɪs ᴘᴇʀsᴏɴ ɪs sᴘᴀᴍᴡᴀᴛᴄʜᴇᴅ!</b>"
-            text += f"\nʀᴇᴀꜱᴏɴ: <pre>{spamwtc.reason}</pre>"
-            text += "\nᴀᴘᴘᴇᴀʟ ᴀᴛ @thanosprosss"
+            text += "\n\n<b>ᴛʜɪs ᴘᴇʀsᴏɴ ɪs sᴘΛᴍᴡΛᴛᴄʜᴇᴅ!</b>"
+            text += f"\nʀᴇΛꜱᴏɴ: <pre>{spamwtc.reason}</pre>"
+            text += "\nΛᴘᴘᴇΛʟ Λᴛ @thanosprosss"
     except:
         pass  # don't crash if api is down somehow...
 
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nᴛʜᴇ ʟᴇᴠᴇʟ ғᴏʀ ᴍʏ ᴍᴀsᴛᴇʀ "
+        text += "\n\nʀɪsʜΛʙʜ ɪs ᴍʏ ᴏᴡɴᴇʀ Λɴᴅ ʙғ"
         disaster_level_present = True
     elif user.id in DEV_USERS:
         text += "\n\nThe level for this user is Destroyers"
@@ -340,7 +340,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nThe level for this user is Villain"
         disaster_level_present = True
     elif user.id == 5470956337:
-        text += "\n\nᴄᴏ-ᴏᴡᴇʀɴ ᴏғ ᴀ ʙᴏᴛ."
+        text += "\n\nᴏᴡᴇʀɴ ᴏғ Λ ʙᴏᴛ."
         disaster_level_present = True
 
     if disaster_level_present:
@@ -381,10 +381,10 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "ʜᴇᴀʟᴛʜ", url="https://t.me/thanos_pro/60"
+                                "ʜᴇΛʟᴛʜ", url="https://t.me/thanos_pro/60"
                             ),
                             InlineKeyboardButton(
-                                "ᴅɪsᴀsᴛᴇʀ", url="https://t.me/thanos_pro/60"
+                                "ᴅɪsΛsᴛᴇʀ", url="https://t.me/thanos_pro/60"
                             ),
                         ],
                     ]
@@ -401,7 +401,7 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "ʜᴇᴀʟᴛʜ", url="https://t.me/thanos_pro/60"
+                                "ʜᴇΛʟᴛʜ", url="https://t.me/thanos_pro/60"
                             ),
                             InlineKeyboardButton(
                                 "ʟᴇᴠᴇʟʟɪɴɢ", url="https://t.me/thanos_pro/60"
@@ -441,11 +441,11 @@ def about_me(update: Update, context: CallbackContext):
     elif message.reply_to_message:
         username = message.reply_to_message.from_user.first_name
         update.effective_message.reply_text(
-            f"{username} ʜᴀꜱɴ'ᴛ ꜱᴇᴛ ᴀɴ ɪɴꜰᴏ ᴍᴇꜱꜱᴀɢᴇ ᴀʙᴏᴜᴛ ᴛʜᴇᴍꜱᴇʟᴠᴇꜱ ʏᴇ !",
+            f"{username} ʜΛꜱɴ'ᴛ ꜱᴇᴛ Λɴ ɪɴꜰᴏ ᴍᴇꜱꜱΛɢᴇ Λʙᴏᴜᴛ ᴛʜᴇᴍꜱᴇʟᴠᴇꜱ ʏᴇ !",
         )
     else:
         update.effective_message.reply_text(
-            "ᴛʜᴇʀᴇ ɪꜱ ɴᴏᴛ ᴀɴʏ ʙɪᴏ, use /setme ᴛᴏ ꜱᴇᴛ ᴏɴᴇ."
+            "ᴛʜᴇʀᴇ ɪꜱ ɴᴏᴛ Λɴʏ ʙɪᴏ, use /setme ᴛᴏ ꜱᴇᴛ ᴏɴᴇ."
         )
 
 
@@ -490,22 +490,22 @@ def stats(update, context):
     ).scalar_one_or_none()
     uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
     botuptime = get_readable_time((time.time() - StartTime))
-    status = "*╒═══「 ꜱʏꜱᴛᴇᴍ ꜱᴛᴀᴛɪᴄꜱ: 」*\n\n"
-    status += "*× ꜱʏꜱᴛᴇᴍ ꜱᴛᴀʀᴛ ᴛɪᴍᴇ:* " + str(uptime) + "\n"
+    status = "*╒═══「 ꜱʏꜱᴛᴇᴍ ꜱᴛΛᴛɪᴄꜱ: 」*\n\n"
+    status += "*× ꜱʏꜱᴛᴇᴍ ꜱᴛΛʀᴛ ᴛɪᴍᴇ:* " + str(uptime) + "\n"
     uname = platform.uname()
     status += "*× ꜱʏꜱᴛᴇᴍ:* " + str(uname.system) + "\n"
-    status += "*× ɴᴏᴅᴇ ɴᴀᴍᴇ:* " + escape_markdown(str(uname.node)) + "\n"
-    status += "*× ʀᴇʟᴇᴀꜱᴇ:* " + escape_markdown(str(uname.release)) + "\n"
-    status += "*× ᴍᴀᴄʜɪɴᴇ:* " + escape_markdown(str(uname.machine)) + "\n"
+    status += "*× ɴᴏᴅᴇ ɴΛᴍᴇ:* " + escape_markdown(str(uname.node)) + "\n"
+    status += "*× ʀᴇʟᴇΛꜱᴇ:* " + escape_markdown(str(uname.release)) + "\n"
+    status += "*× ᴍΛᴄʜɪɴᴇ:* " + escape_markdown(str(uname.machine)) + "\n"
 
     mem = virtual_memory()
     cpu = cpu_percent()
     disk = disk_usage("/")
     status += "*× ᴄᴘᴜ:* " + str(cpu) + " %\n"
-    status += "*× ʀᴀᴍ:* " + str(mem[2]) + " %\n"
-    status += "*× ꜱᴛᴏʀᴀɢᴇ:* " + str(disk[3]) + " %\n\n"
+    status += "*× ʀΛᴍ:* " + str(mem[2]) + " %\n"
+    status += "*× ꜱᴛᴏʀΛɢᴇ:* " + str(disk[3]) + " %\n\n"
     status += "*× ᴘʏᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ:* " + python_version() + "\n"
-    status += "*× ᴘʏᴛʜᴏɴ-ᴛᴇʟᴇɢʀᴀᴍ-ʙᴏᴛ:* " + str(ptbver) + "\n"
+    status += "*× ᴘʏᴛʜᴏɴ-ᴛᴇʟᴇɢʀΛᴍ-ʙᴏᴛ:* " + str(ptbver) + "\n"
     status += "*× ᴜᴘᴛɪᴍᴇ:* " + str(botuptime) + "\n"
     status += "*× ᴅʙ ꜱɪᴢᴇ:* " + str(db_size) + "\n"
     kb = [[InlineKeyboardButton("Ping", callback_data="pingCB")]]
@@ -518,7 +518,7 @@ def stats(update, context):
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
             + "\n\n[⍙ ɢɪᴛʜᴜʙ](https://t.me/fakemailbot) | ⍚\n\n "
-            + "╘══「 by [ʀɪꜱʜᴀʙʜ](github.com/rishabh69) 」\n",
+            + "╘══「 by [ʀɪꜱʜΛʙʜ](github.com/rishabh69) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(kb),
             disable_web_page_preview=True,
@@ -533,7 +533,7 @@ def stats(update, context):
                     )
                     + "\n\n⍙ [ɢɪᴛʜᴜʙ](https://t.me/fakemailbot) | ⍚ \n\n"
                 )
-                + "╘══「 by [ᴅʏɴᴀᴍɪᴄ](github.com/rishabh69) 」\n"
+                + "╘══「 by [ᴅʏɴΛᴍɪᴄ](github.com/rishabh69) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(kb),
@@ -569,11 +569,11 @@ def about_bio(update: Update, context: CallbackContext):
     elif message.reply_to_message:
         username = user.first_name
         update.effective_message.reply_text(
-            f"{username} ʜᴀꜱɴ'ᴛ ʜᴀᴅ ᴀ ᴍᴇꜱꜱᴀɢᴇ ꜱᴇᴛ ᴀʙᴏᴜᴛ ᴛʜᴇᴍꜱᴇʟᴠᴇꜱ ʏᴇᴛ!\nꜱᴇᴛ ᴏɴᴇ ᴜꜱɪɴɢ  /setbio",
+            f"{username} ʜΛꜱɴ'ᴛ ʜΛᴅ Λ ᴍᴇꜱꜱΛɢᴇ ꜱᴇᴛ Λʙᴏᴜᴛ ᴛʜᴇᴍꜱᴇʟᴠᴇꜱ ʏᴇᴛ!\nꜱᴇᴛ ᴏɴᴇ ᴜꜱɪɴɢ  /setbio",
         )
     else:
         update.effective_message.reply_text(
-            "ʏᴏᴜ ʜᴀꜱɴ' ʜᴀᴅ ᴀ ʙɪᴏ ꜱᴇᴛ ᴀʙᴏᴜᴛ ʏᴏᴜʀꜱᴇʟꜰ ʏᴇᴛ!",
+            "ʏᴏᴜ ʜΛꜱɴ' ʜΛᴅ Λ ʙɪᴏ ꜱᴇᴛ Λʙᴏᴜᴛ ʏᴏᴜʀꜱᴇʟꜰ ʏᴇᴛ!",
         )
     message = update.effective_message
     if message.reply_to_message:
@@ -581,7 +581,7 @@ def about_bio(update: Update, context: CallbackContext):
         user_id = repl_message.from_user.id
         if user_id == message.from_user.id:
             message.reply_text(
-                "ʜᴀ, ʏᴏᴜ ᴄᴀɴ'ᴛ ꜱᴇᴛ ʏᴏᴜʀ ᴏᴡɴ ʙɪᴏ ! ʏᴏᴜ'ʀᴇ ᴀᴛ ᴛʜᴇ ᴍᴇʀᴄʏ ᴏʀ ᴏᴛʜᴇʀꜱ ʜᴇʀᴇ..."
+                "ʜΛ, ʏᴏᴜ ᴄΛɴ'ᴛ ꜱᴇᴛ ʏᴏᴜʀ ᴏᴡɴ ʙɪᴏ ! ʏᴏᴜ'ʀᴇ Λᴛ ᴛʜᴇ ᴍᴇʀᴄʏ ᴏʀ ᴏᴛʜᴇʀꜱ ʜᴇʀᴇ..."
             )
             return
         sender_id = update.effective_user.id
@@ -602,16 +602,16 @@ def about_bio(update: Update, context: CallbackContext):
             if len(bio[1]) < MAX_MESSAGE_LENGTH // 4:
                 sql.set_user_bio(user_id, bio[1])
                 message.reply_text(
-                    "ᴜᴘᴅᴀᴛᴇᴅ {}'ꜱ ʙɪᴏ!".format(repl_message.from_user.first_name)
+                    "ᴜᴘᴅΛᴛᴇᴅ {}'ꜱ ʙɪᴏ!".format(repl_message.from_user.first_name)
                 )
             else:
                 message.reply_text(
-                    "ᴀ ʙɪᴏ ɴᴇᴇᴅꜱ ᴛᴏ ʙᴇ ᴜɴᴅᴇʀ {} ᴄʜᴀʀᴇᴄᴛᴇʀ! ʏᴏᴜ ᴛʀɪᴇᴅ ᴛᴏ ꜱᴇᴛ {}.".format(
+                    "Λ ʙɪᴏ ɴᴇᴇᴅꜱ ᴛᴏ ʙᴇ ᴜɴᴅᴇʀ {} ᴄʜΛʀᴇᴄᴛᴇʀ! ʏᴏᴜ ᴛʀɪᴇᴅ ᴛᴏ ꜱᴇᴛ {}.".format(
                         MAX_MESSAGE_LENGTH // 4, len(bio[1])
                     )
                 )
     else:
-        message.reply_text("ʀᴇᴘʟʏ ᴛᴏ ꜱᴏᴍᴇᴏɴᴇ'ꜱ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ꜱᴇᴛ ᴛʜᴇɪʀ ʙɪᴏ!")
+        message.reply_text("ʀᴇᴘʟʏ ᴛᴏ ꜱᴏᴍᴇᴏɴᴇ'ꜱ ᴍᴇꜱꜱΛɢᴇ ᴛᴏ ꜱᴇᴛ ᴛʜᴇɪʀ ʙɪᴏ!")
 
 
 @alicecmd(command="setbio")
@@ -626,7 +626,7 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == message.from_user.id:
             message.reply_text(
-                "ʜᴀ, ʏᴏᴜ ᴄᴀɴ'ᴛ ꜱᴇᴛ ʏᴏᴜʀ ᴏᴡɴ ʙɪᴏ! ʏᴏᴜ'ʀᴇ ᴀᴛ ᴛʜᴇ ᴍᴇʀᴄʏ ᴏꜰ ᴏᴛʜᴇʀꜱ ʜᴇʀᴇ...",
+                "ʜΛ, ʏᴏᴜ ᴄΛɴ'ᴛ ꜱᴇᴛ ʏᴏᴜʀ ᴏᴡɴ ʙɪᴏ! ʏᴏᴜ'ʀᴇ Λᴛ ᴛʜᴇ ᴍᴇʀᴄʏ ᴏꜰ ᴏᴛʜᴇʀꜱ ʜᴇʀᴇ...",
             )
             return
 
@@ -636,7 +636,7 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "ᴇʀᴍ... ʏᴇᴀʜ, ɪ ᴏɴʟʏ ᴛʀᴜꜱᴛ ᴛʜᴇ ᴀᴄᴋᴇʀᴍᴀɴꜱ ᴛᴏ ꜱᴇᴛ ᴍʏ ʙɪᴏ.",
+                "ᴇʀᴍ... ʏᴇΛʜ, ɪ ᴏɴʟʏ ᴛʀᴜꜱᴛ ᴛʜᴇ ΛᴄᴋᴇʀᴍΛɴꜱ ᴛᴏ ꜱᴇᴛ ᴍʏ ʙɪᴏ.",
             )
             return
 
@@ -654,7 +654,7 @@ def set_about_bio(update: Update, context: CallbackContext):
                 )
             else:
                 message.reply_text(
-                    "ʙɪᴏ ɴᴇᴇᴅꜱ ᴛᴏ ᴜɴᴅᴇʀ {} ᴄʜᴀʀᴇᴄᴛᴇʀ! ʏᴏᴜ ᴛʀɪᴇᴅ ᴛᴏ ꜱᴇᴛ {}.".format(
+                    "ʙɪᴏ ɴᴇᴇᴅꜱ ᴛᴏ ᴜɴᴅᴇʀ {} ᴄʜΛʀᴇᴄᴛᴇʀ! ʏᴏᴜ ᴛʀɪᴇᴅ ᴛᴏ ꜱᴇᴛ {}.".format(
                         MAX_MESSAGE_LENGTH // 4,
                         len(bio[1]),
                     ),
@@ -668,14 +668,14 @@ def __user_info__(user_id):
     me = html.escape(sql.get_user_me_info(user_id) or "")
     result = ""
     if me:
-        result += f"<b>ᴀʙᴏᴜᴛ ᴜꜱᴇʀ:</b>\n{me}\n"
+        result += f"<b>Λʙᴏᴜᴛ ᴜꜱᴇʀ:</b>\n{me}\n"
     if bio:
-        result += f"<b>ᴡʜᴀᴛ ᴏᴛʜᴇʀ ꜱᴀʏꜱ:</b>\n{bio}\n"
+        result += f"<b>ᴡʜΛᴛ ᴏᴛʜᴇʀ ꜱΛʏꜱ:</b>\n{bio}\n"
     result = result.strip("\n")
     return result
 
 
-__mod_name__ = "𝐈ɴғᴏ "
+__mod_name__ = "ɪɴғᴏ "
 
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ

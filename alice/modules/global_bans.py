@@ -623,7 +623,7 @@ dispatcher.add_handler(UNGBAN_HANDLER)
 dispatcher.add_handler(GBAN_LIST)
 dispatcher.add_handler(GBAN_STATUS)
 
-__mod_name__ = "𝐀-sᴘᴀᴍ"
+__mod_name__ = "Λ-sᴘᴀᴍ"
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 

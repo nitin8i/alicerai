@@ -74,7 +74,7 @@ async def telegrap(event):
             end = datetime.now()
             ms = (end - start).seconds
             if not downloaded_file_name:
-                await Client.send_message(event.chat_id, "ɴᴏᴛ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ғᴏʀᴍᴀᴛ ᴍᴇᴅɪᴀ!")
+                await Client.send_message(event.chat_id, "ɴᴏᴛ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ғᴏʀᴍΛᴛ ᴍᴇᴅɪΛ!")
                 return
             else:
                 if downloaded_file_name.endswith((".webp")):
@@ -92,7 +92,7 @@ async def telegrap(event):
                     os.remove(downloaded_file_name)
                     await Client.send_message(
                         event.chat_id,
-                        f"`ᴅᴏɴᴇ`!\n**•ʀᴇϙᴜᴇꜱᴛᴇᴅ ʙʏ:**- [{event.sender.first_name}](tg://user?id={event.sender.id})\n**•ᴜᴘʟᴏᴀᴅ ʙʏ:** [{a.first_name}](tg://user?id={a.id})\n**•ʟɪɴᴋ: **`https://telegra.ph{media_urls[0]}` ",
+                        f"`ᴅᴏɴᴇ`!\n**•ʀᴇϙᴜᴇꜱᴛᴇᴅ ʙʏ:**- [{event.sender.first_name}](tg://user?id={event.sender.id})\n**•ᴜᴘʟᴏΛᴅ ʙʏ:** [{a.first_name}](tg://user?id={a.id})\n**•ʟɪɴᴋ: **`https://telegra.ph{media_urls[0]}` ",
                         buttons=[
                             [
                                 types.KeyboardButtonUrl(
@@ -116,7 +116,7 @@ async def telegrap(event):
                     title_of_page = page_content
                 else:
                     await Client.send_message(
-                        event.chat_id, "ɴᴏᴛ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ғᴏʀᴍᴀᴛ ᴛᴇxᴛ!"
+                        event.chat_id, "ɴᴏᴛ ꜱᴜᴘᴘᴏʀᴛᴇᴅ ғᴏʀᴍΛᴛ ᴛᴇxᴛ!"
                     )
                 downloaded_file_name = await Client.download_media(
                     reply_msg, TMP_DOWNLOAD_DIRECTORY
@@ -135,7 +135,7 @@ async def telegrap(event):
             url = "https://telegra.ph/{}".format(response["path"])
             await Client.send_message(
                 event.chat_id,
-                f"ᴅᴏɴᴇ!\n**•ʀᴇϙᴜᴇꜱᴛᴇᴅ ʙʏ:-** [{event.sender.first_name}](tg://user?id={event.sender.id})\n**•ᴜᴘʟᴏᴀᴅ ʙʏ:-** [{a.first_name}](tg://user?id={a.id})\n**•ʟɪɴᴋ:** `{url}`",
+                f"ᴅᴏɴᴇ!\n**•ʀᴇϙᴜᴇꜱᴛᴇᴅ ʙʏ:-** [{event.sender.first_name}](tg://user?id={event.sender.id})\n**•ᴜᴘʟᴏΛᴅ ʙʏ:-** [{a.first_name}](tg://user?id={a.id})\n**•ʟɪɴᴋ:** `{url}`",
                 buttons=[
                     [
                         types.KeyboardButtonUrl(
@@ -146,7 +146,7 @@ async def telegrap(event):
                 ],
             )
     else:
-        await event.reply("`ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ɢᴇᴛ ᴀ ᴘᴇʀᴍᴀɴᴇɴᴛ telegra.ph link`")
+        await event.reply("`ʀᴇᴘʟʏ ᴛᴏ Λ ᴍᴇꜱꜱΛɢᴇ ᴛᴏ ɢᴇᴛ Λ ᴘᴇʀᴍΛɴᴇɴᴛ telegra.ph link`")
 
 
 def resize_image(image):
@@ -158,4 +158,4 @@ file_help = os.path.basename(__file__)
 file_help = file_help.replace(".py", "")
 file_helpo = file_help.replace("_", " ")
 
-__mod_name__ = "𝐓-ɢᴀᴘʜ"
+__mod_name__ = "ᴛ-ɢΛᴘʜ"

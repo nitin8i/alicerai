@@ -30,12 +30,12 @@ def report_setting(update: Update, context: CallbackContext):
             if args[0] in ("yes", "on"):
                 sql.set_user_setting(chat.id, True)
                 msg.reply_text(
-                    "ᴛᴜʀɴᴇᴅ ᴏɴ ʀᴇᴘᴏʀᴛɪɴɢ! ʏᴏᴜ'ʟʟ ʙᴇ ɴᴏᴛɪꜰɪᴇᴅ ᴡʜᴇɴᴇᴠᴇʀ ᴀɴʏᴏɴᴇ ʀᴇᴘᴏʀᴛꜱ ꜱᴏᴍᴇᴛʜɪɴɢ.",
+                    "ᴛᴜʀɴᴇᴅ ᴏɴ ʀᴇᴘᴏʀᴛɪɴɢ! ʏᴏᴜ'ʟʟ ʙᴇ ɴᴏᴛɪꜰɪᴇᴅ ᴡʜᴇɴᴇᴠᴇʀ Λɴʏᴏɴᴇ ʀᴇᴘᴏʀᴛꜱ ꜱᴏᴍᴇᴛʜɪɴɢ.",
                 )
 
             elif args[0] in ("no", "off"):
                 sql.set_user_setting(chat.id, False)
-                msg.reply_text("ᴛᴜʀɴᴇᴅ ᴏꜰꜰ ʀᴇᴘᴏʀᴛɪɴɢ! ʏᴏᴜ ᴡᴏɴᴛ ɢᴇᴛ ᴀɴʏ ʀᴇᴘᴏʀᴛꜱ.")
+                msg.reply_text("ᴛᴜʀɴᴇᴅ ᴏꜰꜰ ʀᴇᴘᴏʀᴛɪɴɢ! ʏᴏᴜ ᴡᴏɴᴛ ɢᴇᴛ Λɴʏ ʀᴇᴘᴏʀᴛꜱ.")
         else:
             msg.reply_text(
                 f"Your current report preference is: `{sql.user_should_report(chat.id)}`",
@@ -46,14 +46,14 @@ def report_setting(update: Update, context: CallbackContext):
         if args[0] in ("yes", "on"):
             sql.set_chat_setting(chat.id, True)
             msg.reply_text(
-                "ᴛᴜʀɴᴇᴅ ᴏɴ ʀᴇᴘᴏʀᴛɪɴɢ! ᴀᴅᴍɪɴꜱ ᴡʜᴏ ʜᴀᴠᴇ ᴛᴜʀɴᴇᴅ ᴏɴ ʀᴇᴘᴏʀᴛꜱ ᴡɪʟʟ ʙᴇ ɴᴏᴛɪꜰɪᴇᴅ ᴡʜᴇɴ /report "
-                "ᴏʀ @admin ɪꜱ ᴄᴀʟʟᴇᴅ.",
+                "ᴛᴜʀɴᴇᴅ ᴏɴ ʀᴇᴘᴏʀᴛɪɴɢ! Λᴅᴍɪɴꜱ ᴡʜᴏ ʜΛᴠᴇ ᴛᴜʀɴᴇᴅ ᴏɴ ʀᴇᴘᴏʀᴛꜱ ᴡɪʟʟ ʙᴇ ɴᴏᴛɪꜰɪᴇᴅ ᴡʜᴇɴ /report "
+                "ᴏʀ @admin ɪꜱ ᴄΛʟʟᴇᴅ.",
             )
 
         elif args[0] in ("no", "off"):
             sql.set_chat_setting(chat.id, False)
             msg.reply_text(
-                "ᴛᴜʀɴᴇᴅ ᴏꜰꜰ ʀᴇᴘᴏʀᴛɪɴɢ! ɴᴏ ᴀᴅᴍɪɴꜱ ᴡɪʟʟʟ ʙᴇ ɴᴏᴛɪꜰɪᴇᴅ ᴏɴ /report ᴏʀ @admin.",
+                "ᴛᴜʀɴᴇᴅ ᴏꜰꜰ ʀᴇᴘᴏʀᴛɪɴɢ! ɴᴏ Λᴅᴍɪɴꜱ ᴡɪʟʟʟ ʙᴇ ɴᴏᴛɪꜰɪᴇᴅ ᴏɴ /report ᴏʀ @admin.",
             )
     else:
         msg.reply_text(
@@ -77,7 +77,7 @@ def report(update: Update, context: CallbackContext) -> str:
 
     if message.sender_chat:
         admin_list = bot.getChatAdministrators(chat.id)
-        reported = "ʀᴇᴘᴏʀᴛᴇᴅ ᴛᴏ ᴀᴅᴍɪɴs."
+        reported = "ʀᴇᴘᴏʀᴛᴇᴅ ᴛᴏ Λᴅᴍɪɴs."
         for admin in admin_list:
             if admin.user.is_bot:  # AI didnt take over yet
                 continue
@@ -94,11 +94,11 @@ def report(update: Update, context: CallbackContext) -> str:
         message = update.effective_message
 
         if not args:
-            message.reply_text("ᴀᴅᴅ ᴀ ʀᴇᴀꜱᴏɴ ꜰᴏʀ ʀᴇᴘᴏʀᴛɪɴɢ.")
+            message.reply_text("Λᴅᴅ Λ ʀᴇΛꜱᴏɴ ꜰᴏʀ ʀᴇᴘᴏʀᴛɪɴɢ.")
             return ""
 
         if user.id == reported_user.id:
-            message.reply_text("ᴜʜ ʏᴇᴀʜ, ꜱᴜʀᴇ ꜱᴜʀᴇ...ᴍᴀꜱᴏ ᴍᴜᴄʜ?")
+            message.reply_text("ᴜʜ ʏᴇΛʜ, ꜱᴜʀᴇ ꜱᴜʀᴇ...ᴍΛꜱᴏ ᴍᴜᴄʜ?")
             return ""
 
         if user.id == bot.id:
@@ -106,7 +106,7 @@ def report(update: Update, context: CallbackContext) -> str:
             return ""
 
         if reported_user.id in REPORT_IMMUNE_USERS:
-            message.reply_text("ᴜʜ? ʏᴏᴜ ʀᴇᴘᴏʀᴛɪɴɢ ᴀ ᴅɪꜱᴀꜱᴛᴇʀ?")
+            message.reply_text("ᴜʜ? ʏᴏᴜ ʀᴇᴘᴏʀᴛɪɴɢ Λ ᴅɪꜱΛꜱᴛᴇʀ?")
             return ""
 
         if chat.username and chat.type == Chat.SUPERGROUP:
@@ -117,12 +117,12 @@ def report(update: Update, context: CallbackContext) -> str:
                 f"<b> • ʀᴇᴘᴏʀᴛ ʙʏ:</b> {mention_html(user.id, user.first_name)}(<code>{user.id}</code>)\n"
                 f"<b> • ʀᴇᴘᴏʀᴛ ᴜꜱᴇʀ:</b> {mention_html(reported_user.id, reported_user.first_name)} (<code>{reported_user.id}</code>)\n"
             )
-            link = f'<b> • ʀᴇᴘᴏʀᴛᴇᴅ ᴍᴇꜱꜱᴀɢᴇ:</b> <a href="https://t.me/{chat.username}/{message.reply_to_message.message_id}">click here</a>'
+            link = f'<b> • ʀᴇᴘᴏʀᴛᴇᴅ ᴍᴇꜱꜱΛɢᴇ:</b> <a href="https://t.me/{chat.username}/{message.reply_to_message.message_id}">click here</a>'
             should_forward = False
             keyboard = [
                 [
                     InlineKeyboardButton(
-                        "➡ ᴍᴇꜱꜱᴀɢᴇ",
+                        "➡ ᴍᴇꜱꜱΛɢᴇ",
                         url=f"https://t.me/{chat.username}/{message.reply_to_message.message_id}",
                     ),
                 ],
@@ -132,13 +132,13 @@ def report(update: Update, context: CallbackContext) -> str:
                         callback_data=f"report_{chat.id}=kick={reported_user.id}={reported_user.first_name}",
                     ),
                     InlineKeyboardButton(
-                        "⛔️ ʙᴀɴ",
+                        "⛔️ ʙΛɴ",
                         callback_data=f"report_{chat.id}=banned={reported_user.id}={reported_user.first_name}",
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "❎ ᴅᴇʟᴇᴛᴇ ᴍᴇꜱꜱᴀɢᴇ",
+                        "❎ ᴅᴇʟᴇᴛᴇ ᴍᴇꜱꜱΛɢᴇ",
                         callback_data=f"report_{chat.id}=delete={reported_user.id}={message.reply_to_message.message_id}",
                     ),
                 ],
@@ -147,10 +147,10 @@ def report(update: Update, context: CallbackContext) -> str:
         else:
             reported = (
                 f"{mention_html(user.id, user.first_name)} ʀᴇᴘᴏʀᴛᴇᴅ "
-                f"{mention_html(reported_user.id, reported_user.first_name)} ᴛᴏ ᴛʜᴇ ᴀᴅᴍɪɴꜱ!"
+                f"{mention_html(reported_user.id, reported_user.first_name)} ᴛᴏ ᴛʜᴇ Λᴅᴍɪɴꜱ!"
             )
 
-            msg = f'{mention_html(user.id, user.first_name)} ɪꜱ ᴄᴀʟʟɪɴɢ ꜰᴏʀ ᴀᴅᴍɪɴꜱ ɪɴ "{html.escape(chat_name)}"!'
+            msg = f'{mention_html(user.id, user.first_name)} ɪꜱ ᴄΛʟʟɪɴɢ ꜰᴏʀ Λᴅᴍɪɴꜱ ɪɴ "{html.escape(chat_name)}"!'
             link = ""
             should_forward = True
 
@@ -211,7 +211,7 @@ def report(update: Update, context: CallbackContext) -> str:
                     LOGGER.exception("ᴇxᴄᴇᴘᴛɪᴏɴ ᴡʜɪʟᴇ ʀᴇᴘᴏʀᴛɪɴɢ ᴜꜱᴇʀ\n{}".format(excp))
 
         message.reply_to_message.reply_text(
-            f"{mention_html(user.id, user.first_name)} ʀᴇᴘᴏʀᴛᴇᴅ ᴛʜᴇ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ᴛʜᴇ ᴀᴅᴍɪɴꜱ.",
+            f"{mention_html(user.id, user.first_name)} ʀᴇᴘᴏʀᴛᴇᴅ ᴛʜᴇ ᴍᴇꜱꜱΛɢᴇ ᴛᴏ ᴛʜᴇ Λᴅᴍɪɴꜱ.",
             parse_mode=ParseMode.HTML,
         )
         if not logsql.get_chat_setting(chat.id).log_report:
@@ -226,14 +226,14 @@ def __migrate__(old_chat_id, new_chat_id):
 
 
 def __chat_settings__(chat_id, _):
-    return f"ᴛʜɪs ᴄʜᴀᴛ ɪs sᴇᴛᴜᴘ ᴛᴏ sᴇɴᴅ ᴜsᴇʀ ʀᴇᴘᴏʀᴛs ᴛᴏ ᴀᴅᴍɪɴs, ᴠɪᴀ /report ᴀɴᴅ @admin: `{sql.chat_should_report(chat_id)}`"
+    return f"ᴛʜɪs ᴄʜΛᴛ ɪs sᴇᴛᴜᴘ ᴛᴏ sᴇɴᴅ ᴜsᴇʀ ʀᴇᴘᴏʀᴛs ᴛᴏ Λᴅᴍɪɴs, ᴠɪΛ /report Λɴᴅ @admin: `{sql.chat_should_report(chat_id)}`"
 
 
 def __user_settings__(user_id):
     return (
-        "ʏᴏᴜ ᴡɪʟʟ ʀᴇᴄᴇɪᴠᴇ ʀᴇᴘᴏʀᴛᴀ ꜰʀᴏᴍ ᴄʜᴀᴛꜱ ʏᴏᴜ'ʀᴇ ᴀᴅᴍɪɴ."
+        "ʏᴏᴜ ᴡɪʟʟ ʀᴇᴄᴇɪᴠᴇ ʀᴇᴘᴏʀᴛΛ ꜰʀᴏᴍ ᴄʜΛᴛꜱ ʏᴏᴜ'ʀᴇ Λᴅᴍɪɴ."
         if sql.user_should_report(user_id) is True
-        else "ʏᴏᴜ ᴡɪʟʟ *ɴᴏᴛ* ʀᴇᴄᴇɪᴠᴇ ʀᴇᴘᴏʀᴛꜱ ꜰʀᴏᴍ ᴄʜᴀᴛꜱ ʏᴏᴜ'ʀᴇ ᴀᴅᴍɪɴ."
+        else "ʏᴏᴜ ᴡɪʟʟ *ɴᴏᴛ* ʀᴇᴄᴇɪᴠᴇ ʀᴇᴘᴏʀᴛꜱ ꜰʀᴏᴍ ᴄʜΛᴛꜱ ʏᴏᴜ'ʀᴇ Λᴅᴍɪɴ."
     )
 
 
@@ -249,7 +249,7 @@ def buttons(update: Update, context: CallbackContext):
             query.answer("✅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴋɪᴄᴋᴇᴅ")
             return ""
         except Exception as err:
-            query.answer("🛑 ꜰᴀɪʟᴇᴅ ᴛᴏ ᴋɪᴄᴋ")
+            query.answer("🛑 ꜰΛɪʟᴇᴅ ᴛᴏ ᴋɪᴄᴋ")
             bot.sendMessage(
                 text=f"Error: {err}",
                 chat_id=query.message.chat_id,
@@ -258,7 +258,7 @@ def buttons(update: Update, context: CallbackContext):
     elif splitter[1] == "banned":
         try:
             bot.kickChatMember(splitter[0], splitter[2])
-            query.answer("✅  ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ʙᴀɴᴇᴅ")
+            query.answer("✅  ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ʙΛɴᴇᴅ")
             return ""
         except Exception as err:
             bot.sendMessage(
@@ -266,11 +266,11 @@ def buttons(update: Update, context: CallbackContext):
                 chat_id=query.message.chat_id,
                 parse_mode=ParseMode.HTML,
             )
-            query.answer("🛑 ꜰᴀɪʟᴇᴅ ᴛᴏ ʙᴀɴ")
+            query.answer("🛑 ꜰΛɪʟᴇᴅ ᴛᴏ ʙΛɴ")
     elif splitter[1] == "delete":
         try:
             bot.deleteMessage(splitter[0], splitter[3])
-            query.answer("✅ ᴍᴇꜱꜱᴀɢᴇ ᴅᴇʟᴇᴛᴇᴅ")
+            query.answer("✅ ᴍᴇꜱꜱΛɢᴇ ᴅᴇʟᴇᴛᴇᴅ")
             return ""
         except Exception as err:
             bot.sendMessage(
@@ -278,10 +278,10 @@ def buttons(update: Update, context: CallbackContext):
                 chat_id=query.message.chat_id,
                 parse_mode=ParseMode.HTML,
             )
-            query.answer("🛑 ꜰᴀɪʟᴇᴅ ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴍᴇꜱꜱᴀɢᴇ!")
+            query.answer("🛑 ꜰΛɪʟᴇᴅ ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴍᴇꜱꜱΛɢᴇ!")
 
 
-__mod_name__ = "𝐑ᴇᴘᴏʀᴛ"
+__mod_name__ = "ʀᴇᴘᴏʀᴛ"
 
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ

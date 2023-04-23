@@ -558,7 +558,7 @@ def blacklist_help_bse(update: Update, context: CallbackContext):
     bot.answer_callback_query(query.id)
 
 
-__mod_name__ = "𝐁-ʟɪsᴛ️"
+__mod_name__ = "ʙ-ʟɪsᴛ️"
 
 
 def get_help(chat):

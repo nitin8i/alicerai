@@ -55,7 +55,7 @@ def get_readable_time(seconds: int) -> str:
     count = 0
     ping_time = ""
     time_list = []
-    time_suffix_list = ["s", "ᴍ", "ʜ", "ᴅᴀʏs"]
+    time_suffix_list = ["s", "ᴍ", "ʜ", "ᴅΛʏs"]
 
     while count < 4:
         count += 1
@@ -98,7 +98,7 @@ def ping_func(to_ping: List[str]) -> List[str]:
     return ping_result
 
 
-# @sudo_plus   # ᴘᴜʙʟɪᴄ ᴘɪɴɢ ᴄᴏᴍᴍᴀɴᴅ
+# @sudo_plus   # ᴘᴜʙʟɪᴄ ᴘɪɴɢ ᴄᴏᴍᴍΛɴᴅ
 def ping(update: Update, context: CallbackContext):
     msg = update.effective_message
 
@@ -110,14 +110,14 @@ def ping(update: Update, context: CallbackContext):
 
     message.edit_text(
         "PONG!!\n"
-        "<b>ᴛɪᴍᴇ ᴛᴀᴋᴇɴ:</b> <code>{}</code>\n"
+        "<b>ᴛɪᴍᴇ ᴛΛᴋᴇɴ:</b> <code>{}</code>\n"
         "<b>sᴇʀᴠɪᴄᴇ ᴜᴘᴛɪᴍᴇ:</b> <code>{}</code>".format(telegram_ping, uptime),
         parse_mode=ParseMode.HTML,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="sʏsᴛᴇᴍ sᴛᴀᴛs", callback_data="stats_callback"
+                        text="sʏsᴛᴇᴍ sᴛΛᴛs", callback_data="stats_callback"
                     )
                 ]
             ]
@@ -159,7 +159,7 @@ __command_list__ = ["ping", "pingall"]
 __handlers__ = [PING_HANDLER, PINGALL_HANDLER]
 
 
-__mod_name__ = "𝐏ɪɴɢ"
+__mod_name__ = "ᴘɪɴɢ"
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 

@@ -222,20 +222,20 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    f"ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {html.escape(chat.title)} ᴍʏ ᴅᴀʀʟɪɴɢ.",
+                    f"ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {html.escape(chat.title)} ᴍʏ ᴅΛʀʟɪɴɢ.",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
                     f"#USER_JOINED\n"
-                    f"ᴍʏ ᴅᴀʀʟɪɴɢ ʜᴀꜱ ᴄᴏᴍᴇ ᴛᴏ ᴛʜɪꜱ ɢʀᴏᴜᴘ ꜰᴏʀ ᴍᴀᴋᴇ ᴛʜᴇᴇ ᴄʜɪʟᴅ ᴡɪᴛʜ ᴍᴇ"
+                    f"ᴍʏ ᴅΛʀʟɪɴɢ ʜΛꜱ ᴄᴏᴍᴇ ᴛᴏ ᴛʜɪꜱ ɢʀᴏᴜᴘ ꜰᴏʀ ᴍΛᴋᴇ ᴛʜᴇᴇ ᴄʜɪʟᴅ ᴡɪᴛʜ ᴍᴇ"
                 )
                 continue
 
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "ᴡʜᴏᴀ! ᴛʜᴇ ᴅᴇꜱᴛʀᴏʏᴇʀꜱ ᴊᴜꜱᴛ ᴀʀʀɪᴠᴇᴅ!",
+                    "ᴡʜᴏΛ! ᴛʜᴇ ᴅᴇꜱᴛʀᴏʏᴇʀꜱ ᴊᴜꜱᴛ Λʀʀɪᴠᴇᴅ!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -243,7 +243,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Welcome Sudos
             elif new_mem.id in DRAGONS:
                 update.effective_message.reply_text(
-                    "ʜᴜʜ! ꜱʜᴀᴅᴏᴡ ꜱʟᴀʏᴇʀ ᴊᴜꜱᴛ ᴊᴏɪɴᴇᴅ! ꜱᴛᴀʏ ᴀʟᴇʀᴛ!",
+                    "ʜᴜʜ! ꜱʜΛᴅᴏᴡ ꜱʟΛʏᴇʀ ᴊᴜꜱᴛ ᴊᴏɪɴᴇᴅ! ꜱᴛΛʏ Λʟᴇʀᴛ!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -251,7 +251,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Welcome Support
             elif new_mem.id in DEMONS:
                 update.effective_message.reply_text(
-                    "ʜᴜʜ! ꜱᴏᴍᴇᴏɴᴇ ᴡɪᴛʜ ɢᴜʀᴅɪᴀɴ ᴊᴜꜱᴛ ᴊᴏɪɴᴇᴅ!",
+                    "ʜᴜʜ! ꜱᴏᴍᴇᴏɴᴇ ᴡɪᴛʜ ɢᴜʀᴅɪΛɴ ᴊᴜꜱᴛ ᴊᴏɪɴᴇᴅ!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -259,14 +259,14 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Welcome SARDEGNA_USERS
             elif new_mem.id in WOLVES:
                 update.effective_message.reply_text(
-                    "ᴏᴏꜰ! ᴀ ᴠɪʟʟᴀɪɴ ᴜꜱᴇʀ ᴊᴜꜱᴛ ᴊᴏɪɴᴇᴅ!", reply_to_message_id=reply
+                    "ᴏᴏꜰ! Λ ᴠɪʟʟΛɪɴ ᴜꜱᴇʀ ᴊᴜꜱᴛ ᴊᴏɪɴᴇᴅ!", reply_to_message_id=reply
                 )
                 continue
 
             # Welcome yourself
             elif new_mem.id == bot.id:
                 update.effective_message.reply_text(
-                    "ᴛʜᴀɴᴋꜱ ꜰᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ! ᴊᴏɪɴ @thanosprosss ꜰᴏʀ ꜱᴜᴘᴘᴏʀᴛ.",
+                    "ᴛʜΛɴᴋꜱ ꜰᴏʀ Λᴅᴅɪɴɢ ᴍᴇ! ᴊᴏɪɴ @thanosprosss ꜰᴏʀ ꜱᴜᴘᴘᴏʀᴛ.",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -394,12 +394,12 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
                     f"[{escape_markdown(new_mem.first_name)}](tg://user?id={user.id})"
                 )
                 message = msg.reply_text(
-                    f"{new_join_mem}, ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡᴡ ᴛᴏ ᴘʀᴏᴠᴇ ʏᴏᴜ ᴀʀᴇ ʜᴜᴍᴀɴ.\nʏᴏᴜᴜ ʜᴀᴠᴇ 120 ꜱᴇᴄᴏɴᴅꜱ.",
+                    f"{new_join_mem}, ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡᴡ ᴛᴏ ᴘʀᴏᴠᴇ ʏᴏᴜ Λʀᴇ ʜᴜᴍΛɴ.\nʏᴏᴜᴜ ʜΛᴠᴇ 120 ꜱᴇᴄᴏɴᴅꜱ.",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
                                 InlineKeyboardButton(
-                                    text="ʏᴇꜱ, ɪ'ᴍ ʜᴜᴍᴀɴ.",
+                                    text="ʏᴇꜱ, ɪ'ᴍ ʜᴜᴍΛɴ.",
                                     callback_data=f"user_join_({new_mem.id})",
                                 )
                             ]
@@ -576,14 +576,14 @@ def check_not_bot(
 
         try:
             bot.edit_message_text(
-                "*ᴋɪᴄᴋꜱ ᴛʜᴇ ᴜꜱᴇʀ*\nᴛʜᴇʏ ᴄᴀɴ ᴀʟᴡᴀʏꜱ ʀᴇᴊᴏɪɴ ᴀɴᴅ ᴛʀʏ.",
+                "*ᴋɪᴄᴋꜱ ᴛʜᴇ ᴜꜱᴇʀ*\nᴛʜᴇʏ ᴄΛɴ ΛʟᴡΛʏꜱ ʀᴇᴊᴏɪɴ Λɴᴅ ᴛʀʏ.",
                 chat_id=chat_id,
                 message_id=message_id,
             )
         except TelegramError:
             bot.delete_message(chat_id=chat_id, message_id=message_id)
             bot.send_message(
-                "{} ᴡᴀꜱ ᴋɪᴄᴋᴇᴅ ᴀꜱ ᴛʜᴇʏ ꜰᴀɪʟᴇᴅ ᴛᴏ ᴠᴀʀɪꜰʏ ᴛʜᴇᴍꜱᴇʟᴠᴇꜱ".format(
+                "{} ᴡΛꜱ ᴋɪᴄᴋᴇᴅ Λꜱ ᴛʜᴇʏ ꜰΛɪʟᴇᴅ ᴛᴏ ᴠΛʀɪꜰʏ ᴛʜᴇᴍꜱᴇʟᴠᴇꜱ".format(
                     mention_html(member.id, member.first_name)
                 ),
                 chat_id=chat_id,
@@ -631,14 +631,14 @@ def left_member(update: Update, context: CallbackContext):  # sourcery no-metric
             # Give the owner a special goodbye
             if left_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "ꜱᴇᴇ ʏᴏᴜ ᴀᴛ ʜᴏᴍᴇ ᴍʏ ᴅᴀʀʟɪɴɢ :(", reply_to_message_id=reply
+                    "ꜱᴇᴇ ʏᴏᴜ Λᴛ ʜᴏᴍᴇ ᴍʏ ᴅΛʀʟɪɴɢ :(", reply_to_message_id=reply
                 )
                 return
 
             # Give the devs a special goodbye
             elif left_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "ꜱᴇᴇ ʏᴏᴜ ʟᴀᴛᴇʀ ᴀᴛ ᴛʜᴇ ꜱᴜᴋᴜʀᴀ ᴇᴍᴘɪʀᴇ",
+                    "ꜱᴇᴇ ʏᴏᴜ ʟΛᴛᴇʀ Λᴛ ᴛʜᴇ ꜱᴜᴋᴜʀΛ ᴇᴍᴘɪʀᴇ",
                     reply_to_message_id=reply,
                 )
                 return
@@ -709,8 +709,8 @@ def welcome(update: Update, context: CallbackContext):
         noformat = True
         pref, welcome_m, cust_content, welcome_type = sql.get_welc_pref(chat.id)
         update.effective_message.reply_text(
-            f"ᴛʜɪꜱ ᴄʜᴀᴛ ʜᴀꜱ ɪᴛ's ᴡᴇʟᴄᴏᴍᴇ ꜱᴇᴛᴛɪɴɢ ꜱᴇᴛ ᴛᴏ : `{pref}`.\n"
-            f"*ᴛʜᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇ (ɴᴏᴛ ꜰɪʟʟɪɴɢ ᴛʜᴇ {{}}) ɪꜱ:*",
+            f"ᴛʜɪꜱ ᴄʜΛᴛ ʜΛꜱ ɪᴛ's ᴡᴇʟᴄᴏᴍᴇ ꜱᴇᴛᴛɪɴɢ ꜱᴇᴛ ᴛᴏ : `{pref}`.\n"
+            f"*ᴛʜᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱΛɢᴇ (ɴᴏᴛ ꜰɪʟʟɪɴɢ ᴛʜᴇ {{}}) ɪꜱ:*",
             parse_mode=ParseMode.MARKDOWN,
         )
 
@@ -758,12 +758,12 @@ def welcome(update: Update, context: CallbackContext):
         elif args[0].lower() in ("off", "no"):
             sql.set_welc_preference(str(chat.id), False)
             update.effective_message.reply_text(
-                "ɪ'ʟʟ ɢᴏ ʟᴏᴀꜰ ᴀʀʀᴏᴜɴᴅ ᴀɴᴅ ɴᴏᴛ ᴡᴇʟᴄᴏᴍᴇ ᴀɴʏᴏɴᴇ ᴛʜᴇɴ."
+                "ɪ'ʟʟ ɢᴏ ʟᴏΛꜰ Λʀʀᴏᴜɴᴅ Λɴᴅ ɴᴏᴛ ᴡᴇʟᴄᴏᴍᴇ Λɴʏᴏɴᴇ ᴛʜᴇɴ."
             )
 
         else:
             update.effective_message.reply_text(
-                "ɪ ᴜɴᴅᴇʀꜱᴛᴀɴᴅ 'on/yes' ᴏʀ 'off/no' ᴏɴʟʏ!"
+                "ɪ ᴜɴᴅᴇʀꜱᴛΛɴᴅ 'on/yes' ᴏʀ 'off/no' ᴏɴʟʏ!"
             )
 
 
@@ -777,8 +777,8 @@ def goodbye(update: Update, context: CallbackContext):
         noformat = True
         pref, goodbye_m, goodbye_type = sql.get_gdbye_pref(chat.id)
         update.effective_message.reply_text(
-            f"ᴛʜɪꜱ ᴄʜᴀᴛ ʜᴀꜱ ɪᴛ's ɢᴏᴏᴅʙʏᴇ ꜱᴇᴛᴛɪɴɢ ꜱᴇᴛ ᴛᴏ : `{pref}`.\n"
-            f"*ᴛʜᴇᴇ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ  (ɴᴏᴛ ꜰᴇᴇʟɪɴɢ ᴛʜᴇ {{}}) ɪꜱ:*",
+            f"ᴛʜɪꜱ ᴄʜΛᴛ ʜΛꜱ ɪᴛ's ɢᴏᴏᴅʙʏᴇ ꜱᴇᴛᴛɪɴɢ ꜱᴇᴛ ᴛᴏ : `{pref}`.\n"
+            f"*ᴛʜᴇᴇ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱΛɢᴇ  (ɴᴏᴛ ꜰᴇᴇʟɪɴɢ ᴛʜᴇ {{}}) ɪꜱ:*",
             parse_mode=ParseMode.MARKDOWN,
         )
 
@@ -834,17 +834,17 @@ def set_welcome(update: Update, context: CallbackContext) -> str:
     text, data_type, content, buttons = get_welcome_type(msg)
 
     if data_type is None:
-        msg.reply_text("ʏᴏᴜ ᴅɪᴅɴ'ᴛ ꜱᴘᴇᴄɪꜰʏ ᴡʜᴀᴛ ᴛᴏ ʀᴇᴘʟʏ ᴡɪᴛʜ!")
+        msg.reply_text("ʏᴏᴜ ᴅɪᴅɴ'ᴛ ꜱᴘᴇᴄɪꜰʏ ᴡʜΛᴛ ᴛᴏ ʀᴇᴘʟʏ ᴡɪᴛʜ!")
         return ""
 
     sql.set_custom_welcome(chat.id, content, text, data_type, buttons)
-    msg.reply_text("ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ꜱᴇᴛ ᴄᴜꜱᴛᴏᴍ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇ!")
+    msg.reply_text("ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ꜱᴇᴛ ᴄᴜꜱᴛᴏᴍ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱΛɢᴇ!")
 
     return (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#SET_WELCOME\n"
-        f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
-        f"ꜱᴇᴛ ᴛʜᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇ."
+        f"<b>Λᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+        f"ꜱᴇᴛ ᴛʜᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱΛɢᴇ."
     )
 
 
@@ -859,14 +859,14 @@ def reset_welcome(update: Update, context: CallbackContext) -> str:
         chat.id, None, random.choice(sql.DEFAULT_WELCOME_MESSAGES), sql.Types.TEXT
     )
     update.effective_message.reply_text(
-        "ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ʀᴇꜱᴇᴛ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ᴅᴇꜰᴀᴜʟᴛ!"
+        "ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ʀᴇꜱᴇᴛ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱΛɢᴇ ᴛᴏ ᴅᴇꜰΛᴜʟᴛ!"
     )
 
     return (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#RESET_WELCOME\n"
-        f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
-        f"ʀᴇꜱᴇᴛ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ᴅᴇꜰᴀᴜʟᴛ."
+        f"<b>Λᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+        f"ʀᴇꜱᴇᴛ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱΛɢᴇ ᴛᴏ ᴅᴇꜰΛᴜʟᴛ."
     )
 
 
@@ -880,7 +880,7 @@ def set_goodbye(update: Update, context: CallbackContext) -> str:
     text, data_type, content, buttons = get_welcome_type(msg)
 
     if data_type is None:
-        msg.reply_text("ʏᴏᴜ ᴅɪᴅɴ'ᴛ ꜱᴘᴇᴄɪꜰʏ ᴡʜᴀᴛ ᴛᴏ ʀᴇᴘʟʏ ᴡɪᴛʜ!")
+        msg.reply_text("ʏᴏᴜ ᴅɪᴅɴ'ᴛ ꜱᴘᴇᴄɪꜰʏ ᴡʜΛᴛ ᴛᴏ ʀᴇᴘʟʏ ᴡɪᴛʜ!")
         return ""
 
     sql.set_custom_gdbye(chat.id, content or text, data_type, buttons)
@@ -888,8 +888,8 @@ def set_goodbye(update: Update, context: CallbackContext) -> str:
     return (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#SET_GOODBYE\n"
-        f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
-        f"ꜱᴇᴛ ᴛʜᴇ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ."
+        f"<b>Λᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+        f"ꜱᴇᴛ ᴛʜᴇ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱΛɢᴇ."
     )
 
 
@@ -904,14 +904,14 @@ def reset_goodbye(update: Update, context: CallbackContext) -> str:
         chat.id, random.choice(sql.DEFAULT_GOODBYE_MESSAGES), sql.Types.TEXT
     )
     update.effective_message.reply_text(
-        "ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ʀᴇꜱᴇᴛ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ᴅᴇꜰᴀᴜʟᴛ!"
+        "ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ʀᴇꜱᴇᴛ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱΛɢᴇ ᴛᴏ ᴅᴇꜰΛᴜʟᴛ!"
     )
 
     return (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#RESET_GOODBYE\n"
-        f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
-        f"ʀᴇꜱᴇᴛ ᴛʜᴇ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱᴀɢᴇ."
+        f"<b>Λᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+        f"ʀᴇꜱᴇᴛ ᴛʜᴇ ɢᴏᴏᴅʙʏᴇ ᴍᴇꜱꜱΛɢᴇ."
     )
 
 
@@ -931,42 +931,42 @@ def welcomemute(update: Update, context: CallbackContext) -> str:
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"#WELCOME_MUTE\n"
-                f"<b>• ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
-                f"ʜᴀꜱ ᴛᴏɢɢʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ᴍᴜᴛᴇ ᴛᴏ  <b>OFF</b>."
+                f"<b>• Λᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+                f"ʜΛꜱ ᴛᴏɢɢʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ᴍᴜᴛᴇ ᴛᴏ  <b>OFF</b>."
             )
         elif args[0].lower() in ["soft"]:
             sql.set_welcome_mutes(chat.id, "soft")
             msg.reply_text(
-                "ɪ ᴡɪʟʟ ʀᴇꜱᴛʀɪᴄᴛ ᴜꜱᴇʀꜱ' ᴘᴇʀᴍɪꜱꜱɪᴏɴ ᴛᴏ ꜱᴇɴᴅ ᴍᴇᴅɪᴀ ꜰᴏʀ 24 ʜᴏᴜʀꜱ."
+                "ɪ ᴡɪʟʟ ʀᴇꜱᴛʀɪᴄᴛ ᴜꜱᴇʀꜱ' ᴘᴇʀᴍɪꜱꜱɪᴏɴ ᴛᴏ ꜱᴇɴᴅ ᴍᴇᴅɪΛ ꜰᴏʀ 24 ʜᴏᴜʀꜱ."
             )
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"#WELCOME_MUTE\n"
-                f"<b>• ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
-                f"ʜᴀꜱ ᴛᴏɢɢʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ᴍᴜᴛᴇ ᴛᴏ <b>SOFT</b>."
+                f"<b>• Λᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+                f"ʜΛꜱ ᴛᴏɢɢʟᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ᴍᴜᴛᴇ ᴛᴏ <b>SOFT</b>."
             )
         elif args[0].lower() in ["strong"]:
             sql.set_welcome_mutes(chat.id, "strong")
             msg.reply_text(
-                "ɪ ᴡɪʟʟ ɴᴏᴡ ᴍᴜᴛᴇ ᴘᴇᴏᴘʟᴇ ᴡʜᴇɴ ᴛʜᴇʏ ᴊᴏɪɴ ᴜɴᴛɪʟ ᴛʜᴇʏ ᴘʀᴏᴠᴇ ᴛʜᴇʏ ᴀʀᴇ ɴᴏᴛ ᴀ ʙᴏᴛ.\nᴛʜᴇʏ ᴡɪʟʟ ʜᴀᴠᴇ 120 ꜱᴇᴄᴏɴᴅꜱ "
+                "ɪ ᴡɪʟʟ ɴᴏᴡ ᴍᴜᴛᴇ ᴘᴇᴏᴘʟᴇ ᴡʜᴇɴ ᴛʜᴇʏ ᴊᴏɪɴ ᴜɴᴛɪʟ ᴛʜᴇʏ ᴘʀᴏᴠᴇ ᴛʜᴇʏ Λʀᴇ ɴᴏᴛ Λ ʙᴏᴛ.\nᴛʜᴇʏ ᴡɪʟʟ ʜΛᴠᴇ 120 ꜱᴇᴄᴏɴᴅꜱ "
                 "before they get kicked. "
             )
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"#WELCOME_MUTE\n"
-                f"<b>• ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+                f"<b>• Λᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
                 f"Has toggled welcome mute to <b>STRONG</b>."
             )
         elif args[0].lower() in ["captcha"]:
             sql.set_welcome_mutes(chat.id, "captcha")
             msg.reply_text(
-                "ɪ ᴡɪʟʟ ɴᴏᴡ ᴍᴜᴛᴇ ᴘᴇᴏᴘʟᴇ ᴡʜᴇɴ ᴛʜᴇʏ ᴊᴏɪɴ ᴜɴᴛɪʟʟ ᴛʜᴇʏ ᴘʀᴏᴠᴇ ᴛʜᴇʏ ᴀʀᴇ ɴᴏᴛ ʙᴏᴛ.\nᴛʜᴇʏ ʜᴀᴠᴇ ᴛᴏ ꜱᴏʟᴠᴇ ᴀ "
-                "ᴄᴀᴘᴛᴄʜᴀ ᴛᴏ ɢᴇᴛ ᴜɴᴍᴜᴛᴇᴅ. "
+                "ɪ ᴡɪʟʟ ɴᴏᴡ ᴍᴜᴛᴇ ᴘᴇᴏᴘʟᴇ ᴡʜᴇɴ ᴛʜᴇʏ ᴊᴏɪɴ ᴜɴᴛɪʟʟ ᴛʜᴇʏ ᴘʀᴏᴠᴇ ᴛʜᴇʏ Λʀᴇ ɴᴏᴛ ʙᴏᴛ.\nᴛʜᴇʏ ʜΛᴠᴇ ᴛᴏ ꜱᴏʟᴠᴇ Λ "
+                "ᴄΛᴘᴛᴄʜΛ ᴛᴏ ɢᴇᴛ ᴜɴᴍᴜᴛᴇᴅ. "
             )
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"#WELCOME_MUTE\n"
-                f"<b>• ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+                f"<b>• Λᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
                 f"Has toggled welcome mute to <b>CAPTCHA</b>."
             )
         else:
@@ -1016,11 +1016,11 @@ def clean_welcome(update: Update, context: CallbackContext) -> str:
         )
     elif args[0].lower() in ("off", "no"):
         sql.set_clean_welcome(str(chat.id), False)
-        update.effective_message.reply_text("ɪ ᴡᴏɴ'ᴛ ᴅᴇʟᴇᴛᴇ ᴏʟᴅ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱᴀɢᴇ.")
+        update.effective_message.reply_text("ɪ ᴡᴏɴ'ᴛ ᴅᴇʟᴇᴛᴇ ᴏʟᴅ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇꜱꜱΛɢᴇ.")
         return (
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"#CLEAN_WELCOME\n"
-            f"<b>ᴀᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+            f"<b>Λᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
             f"Has toggled clean welcomes to <code>OFF</code>."
         )
     else:
@@ -1361,7 +1361,7 @@ def fmt_help(update: Update, context: CallbackContext):
             [
                 [
                     InlineKeyboardButton(
-                        text="ʙᴀᴄᴋ",
+                        text="ʙΛᴄᴋ",
                         callback_data=f"help_module({__mod_name__.lower()})",
                     )
                 ]
@@ -1377,11 +1377,11 @@ def get_help(chat):
         gs(chat, "greetings_help"),
         [
             InlineKeyboardButton(text="ᴡᴇʟᴄᴏᴍᴇᴇ ᴍᴜᴛᴇꜱ", callback_data="wlc_help_m"),
-            InlineKeyboardButton(text="ᴡᴇʟᴄᴏᴍᴇ ꜰᴏʀᴍᴀᴛᴛɪɴɢ", callback_data="wlc_help_h"),
+            InlineKeyboardButton(text="ᴡᴇʟᴄᴏᴍᴇ ꜰᴏʀᴍΛᴛᴛɪɴɢ", callback_data="wlc_help_h"),
         ],
     ]
 
 
 # """
 
-__mod_name__ = "𝐖ᴇʟᴄᴏᴍᴇ"
+__mod_name__ = "ᴡᴇʟᴄᴏᴍᴇ"

@@ -113,7 +113,7 @@ __command_list__ = ["del", "purge"]
 __handlers__ = [PURGE_HANDLER, DEL_HANDLER]
 
 
-__mod_name__ = "𝐏ᴜʀɢᴇ"
+__mod_name__ = "ᴘᴜʀɢᴇ"
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 
