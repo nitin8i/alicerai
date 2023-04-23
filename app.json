@@ -70,12 +70,12 @@
       "MONGO_DB_URI": {
          "description": "ʀᴇǫᴜɪʀᴇᴅ ғᴏʀ ᴅᴀᴛᴀʙᴀsᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴs (ᴍᴏɴɢᴏ).",
          "required": true,
-         "value": "mongodb+srv://alice2robot:alice123rishabh@cluster0.b8qsmkn.mongodb.net/?retryWrites=true&w=majority"
+         "value": "mongodb+srv://itsmerishabh:itsmerishabh@cluster0.d4iryu7.mongodb.net/?retryWrites=true&w=majority"
       },
       "TOKEN": {
          "description": "Get bot token from @BotFather on TG",
          "required": true,
-         "value": ""
+         "value": "5829047227:AAHoU35s4m1WEgFvepvY3puXIuI1RsLXml0"
       }
    }
 }
