@@ -120,7 +120,7 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
             )
         )
 
-    COLUMN_SIZE = 6
+    COLUMN_SIZE = 15
 
     max_num_pages = ceil(len(pairs) / COLUMN_SIZE)
     modulo_page = page_n % max_num_pages
@@ -129,18 +129,18 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
     if len(pairs) > COLUMN_SIZE:
         pairs = pairs[modulo_page * COLUMN_SIZE : COLUMN_SIZE * (modulo_page + 1)] + [
             (
+                #EqInlineKeyboardButton(
+                   # "☜",
+                   # callback_data="{}_prev({})".format(prefix, modulo_page),
+               # ),
                 EqInlineKeyboardButton(
-                    "☜",
-                    callback_data="{}_prev({})".format(prefix, modulo_page),
-                ),
-                EqInlineKeyboardButton(
-                    "ɢᴏ ʜᴏᴍᴇ",
+                    "ʜᴏᴍᴇ",
                     callback_data="start_back",
                 ),
-                EqInlineKeyboardButton(
-                    "☞",
-                    callback_data="{}_next({})".format(prefix, modulo_page),
-                ),
+               # EqInlineKeyboardButton(
+                  #  "☞",
+                   # callback_data="{}_next({})".format(prefix, modulo_page),
+                #),
             )
         ]
 
