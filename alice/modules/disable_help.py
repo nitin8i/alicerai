@@ -1,4 +1,4 @@
-from Exon.modules.language import gs
+from alice.modules.language import gs
 
 
 def get_help(chat):
