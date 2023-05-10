@@ -1,32 +1,3 @@
-"""
-MIT License
-
-Copyright (c) 2022 rishabh69
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
-
-# ""DEAR PRO PEOPLE,  DON'T REMOVE & CHANGE THIS LINE
-# TG :- @thanosceo
-#     UPDATE   :- thanos_pro
-#     GITHUB :- rishabh69 ""
-
 from pyrogram.types import CallbackQuery
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode
 from telegram.ext import CallbackQueryHandler
@@ -75,8 +46,8 @@ def ABG_about_callback(update, context):
     query = update.callback_query
     if query.data == "ABG_":
         query.message.edit_text(
-            text=f"๏ hello I am Λʟɪᴄᴇ"
-            "\n\n*ᴄʟɪᴄᴋ ᴏɴ ʙᴜᴛᴛᴏɴ ʙᴇʟʟᴏᴡ ᴛᴏ ɢᴇᴛ ʙΛsɪᴄ ʜᴇʟᴘ ғᴏʀ Λʟɪᴄᴇʀᴏʙᴏᴛ*.",
+            text=f" ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ Λﾚɪᴄᴇ ʜᴇʟᴘ ᴍᴇɴᴜ"
+            "\n\n*ᴄʟɪᴄᴋ ᴏɴ ʙᴜᴛᴛᴏɴ ʙᴇʟʟᴏᴡ ᴛᴏ ɢᴇᴛ ʙΛsɪᴄ ʜᴇʟᴘ ғᴏʀ Λﾚɪᴄᴇʀᴏʙᴏᴛ*.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -95,10 +66,10 @@ def ABG_about_callback(update, context):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ꜱᴇꜱꜱɪᴏɴ🏵", callback_data="ABG_session"
+                            text="ꜱᴇꜱꜱɪᴏᴻ🏵", callback_data="ABG_session"
                         ),
                         InlineKeyboardButton(
-                            text="ᴍᴜꜱɪᴄ🎀", callback_data="ABG_music"
+                            text="ᴍᴜꜱɪᴄ🎧", callback_data="ABG_music"
                         ),
                     ],
                     [
@@ -148,7 +119,7 @@ def ABG_about_callback(update, context):
         )
     elif query.data == "ABG_ad":
         query.message.edit_text(
-            text="""Advanced Commands in Λʟɪᴄᴇ
+            text="""Advanced Commands in Λﾚɪᴄᴇ
 
 👮🏻Available to Admins&Moderators.
 🕵🏻Available to Admins.
@@ -171,7 +142,7 @@ WARN MANAGEMENT
         )
     elif query.data == "ABG_ex":
         query.message.edit_text(
-            text="""ᴇxᴘᴇʀᴛ ᴄᴏᴍᴍΛɴᴅs in Λʟɪᴄᴇ
+            text="""ᴇxᴘᴇʀᴛ ᴄᴏᴍᴍΛɴᴅs in Λﾚɪᴄᴇ
 🕵🏻/connect : ʟᴇᴛs ʏᴏᴜ ᴍΛɴΛɢᴇ Λʟʟ ᴛʜᴇ ʙᴏᴛ sᴇᴛᴛɪɴɢs ᴛᴏ sᴇᴛ-ᴜᴘ ғᴜɴᴄᴛɪᴏɴ.  
 👮🏻/promote : ᴄᴏɴᴛʀᴏʟ ᴡʜᴏʟᴇ ᴘʀᴏᴍᴏᴛᴇ ᴘΛɴᴇʟ ʟɪᴋᴇ : ʟᴏᴡ-ᴘʀᴏᴍᴏᴛᴇ, ᴍɪᴅ-ᴘʀᴏᴍᴏᴛᴇ, ғᴜʟʟ-ᴘʀᴏᴍᴏᴛᴇ, Λɴᴏɴʏᴍᴏᴜs ᴘʀᴏᴍᴏᴛᴇ.
 👮🏻/antiflood : ᴄᴏɴᴛʀᴏʟ ᴡʜᴏʟᴇ Λɴᴛɪғʟᴏᴏᴅ ᴘΛɴᴇʟ ʟɪᴋᴇ : ғʟᴏᴏᴅᴍᴏᴅᴇ, ғʟᴏᴏᴅ ᴍsɢ, ᴏʀ ғʟᴏᴏᴅ.
@@ -184,19 +155,19 @@ WARN MANAGEMENT
         )
     elif query.data == "ABG_session":
         query.message.edit_text(
-            text="""ꜱᴇꜱꜱɪᴏɴ🏵 ᴄᴏᴍᴍΛɴᴅs in Λʟɪᴄᴇ:
+            text="""ꜱᴇꜱꜱɪᴏᴻ🏵 ᴄᴏᴍᴍΛɴᴅs in Λﾚɪᴄᴇ:
 
 ╭────────────
 ◈ɴᴏᴛᴇ-> ꜰᴏʀ ᴍΛᴋɪɴɢ ΛɴᴛɪʙΛɴ.      
    ᴛᴇʟᴇᴛʜᴏɴ ꜱᴇꜱꜱɪᴏɴ ᴛʜᴇɴ ᴜꜱᴇ
-   ᴛʜΛɴᴏꜱ    ꜱᴇꜱꜱɪᴏɴ 
+   ⲦʜΛᴻᴏ໓    ꜱᴇꜱꜱɪᴏɴ 
 
-◈Λʙᴏᴜᴛ ᴛʜΛɴᴏꜱ ꜱᴇꜱꜱɪᴏɴ:
-   ᴛʜΛɴᴏꜱ ꜱᴇꜱꜱɪᴏɴ ɪꜱ ᴍᴏᴅɪꜰɪᴇᴅ            
-   ᴛᴇʟᴇᴛʜᴏɴ ꜱᴇꜱꜱɪᴏɴ
+◈Λʙᴏᴜᴛ ⲦʜΛᴻᴏ໓ ꜱᴇꜱꜱɪᴏᴻ:
+   ⲦʜΛᴻᴏ໓ ꜱᴇꜱꜱɪᴏɴ ɪꜱ ᴍᴏᴅɪꜰɪᴇᴅ ᴠᴇʀꜱɪᴏɴ 
+   ᴏғ ᴛᴇʟᴇᴛʜᴏɴ ꜱᴇꜱꜱɪᴏɴ
 
 ◈ᴄᴏᴍᴍΛɴᴅs:
-◈```/session``` ꜰᴏʀ ᴍΛᴋɪɴɢ ꜱᴇꜱꜱɪᴏɴ
+◈`/session` ꜰᴏʀ ᴍΛᴋɪɴɢ ꜱᴇꜱꜱɪᴏɴ
 
 ╰────────────""",
             parse_mode=ParseMode.HTML,
@@ -206,17 +177,14 @@ WARN MANAGEMENT
         )
     elif query.data == "ABG_music":
         query.message.edit_text(
-            text="""ΛᴠΛɪʟΛʙʟᴇ ᴄᴏᴍᴍΛɴᴅs ғᴏʀ ᴜsᴇʀs ɪɴ Λʟɪᴄᴇ :
+            text="""ΛᴠΛɪʟΛʙʟᴇ ᴍᴜꜱɪᴄ🎧 ᴄᴏᴍᴍΛɴᴅs ɪɴ Λﾚɪᴄᴇ :
 -> /play : sᴛΛʀᴛs sᴛʀᴇΛᴍɪɴɢ ᴛʜᴇ 
    ʀᴇǫᴜᴇsᴛᴇᴅ ᴛʀΛᴄᴋ ᴏɴ ᴠɪᴅᴇᴏᴄʜΛᴛ.
 > /pause : ᴩΛᴜsᴇ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟΛʏɪɴɢ sᴛʀᴇΛᴍ.
 > /resume : ʀᴇsᴜᴍᴇ ᴛʜᴇ ᴩΛᴜsᴇᴅ sᴛʀᴇΛᴍ.
 > /skip : sᴋɪᴩ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟΛʏɪɴɢ sᴛʀᴇΛᴍ Λɴᴅ sᴛΛʀᴛ sᴛʀᴇΛᴍɪɴɢ ᴛʜᴇ ɴᴇxᴛ ᴛʀΛᴄᴋ ɪɴ ǫᴜᴇᴜᴇ.
 > /end : ᴄʟᴇΛʀs ᴛʜᴇ ǫᴜᴇᴜᴇ Λɴᴅ ᴇɴᴅ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟΛʏɪɴɢ sᴛʀᴇΛᴍ.
-> /ping : sʜᴏᴡ ᴛʜᴇ ᴩɪɴɢ Λɴᴅ sʏsᴛᴇᴍ sᴛΛᴛs ᴏғ ᴛʜᴇ ʙᴏᴛ.
-> /sudolist : sʜᴏᴡs ᴛʜᴇ ʟɪsᴛ ᴏғ sᴜᴅᴏ ᴜsᴇʀs ᴏғ ᴛʜᴇ ʙᴏᴛ.
-> /song : ᴅᴏᴡɴʟᴏΛᴅs ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ sᴏɴɢ Λɴᴅ sᴇɴᴅ ɪᴛ ᴛᴏ ʏᴏᴜ.
-> /search : sᴇΛʀᴄᴇs ᴛʜᴇ ɢɪᴠᴇɴ ǫᴜᴇʀʏ ᴏɴ ʏᴏᴜᴛᴜʙᴇ Λɴᴅ sʜᴏᴡs ʏᴏᴜ ᴛʜᴇ ʀᴇsᴜʟᴛ.""",
+> /song : ᴅᴏᴡɴʟᴏΛᴅs ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ sᴏɴɢ Λɴᴅ sᴇɴᴅ ɪᴛ ᴛᴏ ʏᴏᴜ.""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="ʙΛᴄᴋ", callback_data="ABG_")]]
@@ -225,7 +193,7 @@ WARN MANAGEMENT
     elif query.data == "ABG_support":
         query.message.edit_text(
             text=f"*๏ {BOT_NAME} sᴜᴘᴘᴏʀᴛ ᴄʜΛᴛs*"
-            "\nᴊᴏɪɴ ᴍʏ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ/ᴄʜΛɴɴᴇʟ ғᴏʀ sᴇᴇ ᴏʀ ʀᴇᴘᴏʀᴛ Λ ᴘʀᴏʙʟᴇᴍ ᴏɴ Λʟɪᴄᴇ",
+            "\nᴊᴏɪɴ ᴍʏ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ/ᴄʜΛɴɴᴇʟ ғᴏʀ sᴇᴇ ᴏʀ ʀᴇᴘᴏʀᴛ Λ ᴘʀᴏʙʟᴇᴍ ᴏɴ Λﾚɪᴄᴇ",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
