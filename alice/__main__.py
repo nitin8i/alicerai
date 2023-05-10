@@ -70,15 +70,15 @@ PM_START_TEX = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="❣ ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ ❣︎", url=f"t.me/{BOT_USERNAME}?startgroup=new"
+            text="☣Λᴅᴅ Λﾚɪᴄᴇ☣", url=f"t.me/{BOT_USERNAME}?startgroup=new"
         ),
     ],
     [
         InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ☣", url="https://t.me/thanosprosss"),
-        InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇꜱ☢", url="https://t.me/thanos_pro"),
+        InlineKeyboardButton(text="ᴜᴘᴅΛᴛᴇꜱ☢", url="https://t.me/thanos_pro"),
     ],
     [
-        InlineKeyboardButton(text=f"ᴄᴏᴍᴍᴀɴᴅꜱ 🖥", callback_data="ABG_"),
+        InlineKeyboardButton(text=f"ᴄᴏᴍᴍΛɴᴅꜱ 🖥", callback_data="ABG_"),
     ],
 ]
 
