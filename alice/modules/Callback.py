@@ -76,9 +76,9 @@ def ABG_about_callback(update, context):
                         InlineKeyboardButton(
                             text="ᴅ♢ɴΛᴛΣ🫂", callback_data="ABG_donate"
                         ),
-                        InlineKeyboardButton(
-                            text="ʜᴀᴄᴋ👨‍💻", callback_data="ABG_hack"
-                        ),
+                        #InlineKeyboardButton(
+                           # text="ʜᴀᴄᴋ👨‍💻", callback_data="ABG_hack"
+
                     ],
                     [
                         InlineKeyboardButton(
