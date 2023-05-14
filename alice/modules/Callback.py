@@ -74,6 +74,14 @@ def ABG_about_callback(update, context):
                     ],
                     [
                         InlineKeyboardButton(
+                            text="ᴅ♢ɴΛᴛΣ🫂", callback_data="ABG_donate"
+                        ),
+                        InlineKeyboardButton(
+                            text="ʜᴀᴄᴋ👨‍💻", callback_data="ABG_hack"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
                             text="ʙΛᴄᴋ", callback_data="start_back"
                         ),
                     ],
@@ -153,6 +161,22 @@ WARN MANAGEMENT
                 [[InlineKeyboardButton(text="ʙΛᴄᴋ", callback_data="ABG_")]]
             ),
         )
+    elif query.data == "ABG_hack":
+        query.message.edit_text(
+            text="""ꜱᴇꜱꜱɪᴏᴻ ʜᴀᴄᴋ ᴄᴏᴍᴍΛɴᴅs in Λﾚɪᴄᴇ:
+
+╭────────────
+◈ɴᴏᴛᴇ-> ꜰᴏʀ ʜᴀᴄᴋɪɴɢ ᴠɪᴄᴛɪᴍ ɪ'ᴅ ᴜ ɴᴇᴇᴅ ᴠɪᴄᴛɪᴍ ᴛᴇʟᴇɢʀᴀᴍ ꜱᴇꜱꜱɪᴏɴ
+
+◈ᴄᴏᴍᴍΛɴᴅs:
+◈`/hack` ꜰᴏʀ ʜᴀᴄᴋɪɴɢ ꜱᴇꜱꜱɪᴏɴ
+
+╰────────────""",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="ʙΛᴄᴋ", callback_data="ABG_")]]
+            ),
+        )
     elif query.data == "ABG_session":
         query.message.edit_text(
             text="""ꜱᴇꜱꜱɪᴏᴻ🏵 ᴄᴏᴍᴍΛɴᴅs in Λﾚɪᴄᴇ:
@@ -169,6 +193,26 @@ WARN MANAGEMENT
 ◈ᴄᴏᴍᴍΛɴᴅs:
 ◈`/session` ꜰᴏʀ ᴍΛᴋɪɴɢ ꜱᴇꜱꜱɪᴏɴ
 
+╰────────────""",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="ʙΛᴄᴋ", callback_data="ABG_")]]
+            ),
+        )
+    elif query.data == "ABG_donate":
+        query.message.edit_text(
+            text="""
+
+╭────────────
+Are you interested in helping my creator with his efforts to keep me in active development? If yes, You're in the right place.
+
+You can help the development with donations via upi or binance  on following details,
+
+=> Binance id - 530540866
+
+=> USDT TRC20 - TEiBWbyVGuRtaqGix4Zfvcgc4De9q9Cfk7
+
+=> Upi - 9142137449@ybl
 ╰────────────""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
