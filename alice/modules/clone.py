@@ -2,7 +2,7 @@ from alice import OWNER_ID, OWNER_USERNAME, PORT, SUPPORT_CHAT, TOKEN, URL, WEBH
 
 from alice import rishabh as client
 
-port os
+import os
 
 import re
 
