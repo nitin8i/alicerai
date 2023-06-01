@@ -1,6 +1,6 @@
 
 from alice import OWNER_ID, OWNER_USERNAME, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK
-
+from alice import rishabh as client
 port os
 import re
 import asyncio
