@@ -24,7 +24,7 @@ IMG = ["https://telegra.ph/file/cefd3211a5acdcd332415.jpg", "https://telegra.ph/
 
 MESSAGE = "Heya! I'm a music bot hoster/Cloner\n\nI can Host Your Bot On My Server within seconds\n\nTry /clone Token from @botfather"
 
-@cloner.on_message(filters.private & filters.command("start"))
+@cloner.on_message(filters.private & filters.command("starts"))
 
 async def hello(client, message: Message):
 
